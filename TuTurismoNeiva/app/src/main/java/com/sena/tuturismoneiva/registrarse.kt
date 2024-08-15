@@ -55,6 +55,10 @@ class registrarse : AppCompatActivity() {
                 txtConfirmContra.error = "Las contraseñas no coinciden"
             }
 
+            if (confirmContra == "") {
+                txtConfirmContra.error = "Este es un campo obligatorio"
+            }
+
             if (txtNombre.error == null && txtTelefono.error == null && txtCorreo.error == null && txtContra.error == null && txtConfirmContra.error == null) {
                 registrarUsuario(nombre, telefono, correo, contra, confirmContra)
             }
