@@ -124,6 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="347dp"
+            android:onClick="iniciarSesion"
             android:text="¿Es tu primera vez en nuestra página? Regístrate"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"

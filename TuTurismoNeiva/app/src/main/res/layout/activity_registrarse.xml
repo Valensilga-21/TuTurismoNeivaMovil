@@ -11,10 +11,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="798dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_width="415dp"
+        android:layout_height="749dp"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-21dp">
 
         <Button
             android:id="@+id/btnVolverInicio2"
@@ -27,16 +27,16 @@
             app:iconTint="@color/naranja"
             app:layout_constraintBottom_toTopOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.213" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="320dp"
             android:layout_height="490dp"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="128dp"
             android:backgroundTint="@color/cards"
             android:foregroundGravity="center_vertical"
             android:outlineSpotShadowColor="#5E5E5E"
