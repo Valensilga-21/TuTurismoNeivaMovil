@@ -16,9 +16,7 @@ class registrarse : AppCompatActivity() {
     private lateinit var txtNombre: EditText
     private lateinit var txtTelefono: EditText
     private lateinit var txtCorreo: EditText
-    private lateinit var txtInputContra: TextInputLayout
     private lateinit var txtContra: EditText
-    private lateinit var txtInputConfirmContra: TextInputLayout
     private lateinit var txtConfirmContra: EditText
     private lateinit var btnRegistrar: Button
     private var id: String = ""
@@ -30,10 +28,8 @@ class registrarse : AppCompatActivity() {
         txtNombre = findViewById(R.id.txtNombre)
         txtTelefono = findViewById(R.id.txtTelefono)
         txtCorreo = findViewById(R.id.txtCorreo)
-        txtInputContra = findViewById(R.id.txtContra)
-        txtContra = txtInputContra.editText ?: throw NullPointerException("EditText is null in txtContra")
-        txtInputConfirmContra = findViewById(R.id.txtConfirmContra)
-        txtConfirmContra = txtInputConfirmContra.editText ?: throw NullPointerException("EditText is null in txtConfirmContra")
+        txtContra = findViewById(R.id.txtContra)
+        txtConfirmContra = findViewById(R.id.txtConfirmContra)
         btnRegistrar = findViewById(R.id.btnRegistrar)
 
         btnRegistrar.setOnClickListener {
