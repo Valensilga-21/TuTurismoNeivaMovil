@@ -24,6 +24,12 @@ class registrarse : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrarse)
 
+        //Volver al inicio
+        var btnVolverInicio2: Button =findViewById<Button>(R.id.btnVolverInicio2)
+        btnVolverInicio2.setOnClickListener{
+            finish()
+        }
+
         txtNombre = findViewById(R.id.txtNombre)
         //txtTelefono = findViewById(R.id.txtTelefono)
         txtCorreo = findViewById(R.id.txtCorreo)
@@ -68,10 +74,10 @@ class registrarse : AppCompatActivity() {
     private fun registrarUsuario() {
         try {
             val parametros = JSONObject()
-            parametros.put("nombre", txtNombre.text.toString())
-            parametros.put("correo", txtCorreo.text.toString())
+            parametros.put("nombreCompleto", txtNombre.text.toString())
+            parametros.put("correoElectronico", txtCorreo.text.toString())
             parametros.put("contra", txtContra.text.toString())
-            parametros.put("confirmContra", txtConfirmContra.text.toString())
+            parametros.put("coContra", txtConfirmContra.text.toString())
 
             val request = JsonObjectRequest(
                 Request.Method.POST,
@@ -96,12 +102,6 @@ class registrarse : AppCompatActivity() {
 
         } catch (error: Exception) {
             Toast.makeText(this, "Error: $error", Toast.LENGTH_LONG).show()
-        }
-
-        //Volver al inicio
-        var btnVolverInicio2: Button =findViewById<Button>(R.id.btnVolverInicio2)
-        btnVolverInicio2.setOnClickListener{
-            finish()
         }
     }
 }

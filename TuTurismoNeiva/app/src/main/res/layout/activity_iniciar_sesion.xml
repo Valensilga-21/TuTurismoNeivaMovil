@@ -73,7 +73,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/txtConfirmCorreo"
             android:layout_width="244dp"
             android:layout_height="35dp"
             android:layout_marginLeft="44dp"
@@ -83,7 +83,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/txtConfirmContraseña"
             android:layout_width="244dp"
             android:layout_height="35dp"
             android:layout_marginLeft="44dp"
@@ -93,7 +93,7 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/btnIniciarSesion"
             android:layout_width="115dp"
             android:layout_height="40dp"
             android:layout_marginLeft="110dp"
@@ -112,6 +112,7 @@
             android:layout_height="37dp"
             android:layout_marginLeft="55dp"
             android:layout_marginTop="318dp"
+            android:onClick="olvidarContraseña"
             android:text="¿Olvidaste tu contraseña?"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="#FFFFFF"

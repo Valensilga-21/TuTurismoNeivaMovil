@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:allowClearUserData="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/tuturismoneiva_foreground"
@@ -14,8 +14,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.TuTurismoNeiva"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".olvidar_contra"
+            android:exported="false" />
         <activity
             android:name=".menu"
             android:exported="false" />
