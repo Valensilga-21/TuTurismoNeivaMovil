@@ -27,6 +27,7 @@ class iniciarSesion : AppCompatActivity() {
             finish()
         }
 
+        /*
         val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
 
         val btnCorreo = findViewById<EditText>(R.id.txtConfirmCorreo)
@@ -47,7 +48,7 @@ class iniciarSesion : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Correo electrónico o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
-        }
+        }*/
     }
 
     fun iniciarSesion(view: View){
@@ -58,5 +59,10 @@ class iniciarSesion : AppCompatActivity() {
     fun olvidarContraseña(view: View){
         var intent = Intent(application, olvidar_contra::class.java)
         startActivity(intent)
+    }
+
+    fun ingresarInicio(view: View){
+        var intent = Intent(application, menu::class.java)
+        startActivity((intent))
     }
 }
