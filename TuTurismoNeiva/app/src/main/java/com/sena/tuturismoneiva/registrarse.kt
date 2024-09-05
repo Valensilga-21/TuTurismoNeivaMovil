@@ -20,6 +20,7 @@ class registrarse : AppCompatActivity() {
     private lateinit var txtConfirmContra: EditText
     private lateinit var btnRegistrar: Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrarse)
@@ -30,6 +31,11 @@ class registrarse : AppCompatActivity() {
             finish()
         }
 
+        val validacionCorreo = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+        val validacionNombre = "^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]+$"
+        val validacionContra = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+
+
         txtNombre = findViewById(R.id.txtNombre)
         //txtTelefono = findViewById(R.id.txtTelefono)
         txtCorreo = findViewById(R.id.txtCorreo)
@@ -39,7 +45,6 @@ class registrarse : AppCompatActivity() {
 
         btnRegistrar.setOnClickListener {
             val nombre = txtNombre.text.toString()
-            //val telefono = txtTelefono.text.toString()
             val correo = txtCorreo.text.toString()
             val contra = txtContra.text.toString()
             val confirmContra = txtConfirmContra.text.toString()
@@ -47,15 +52,26 @@ class registrarse : AppCompatActivity() {
             if (nombre.length !in 3..60) {
                 txtNombre.error = "El nombre debe tener más de 2 y menos de 60 caracteres"
             }
-            /*if (telefono.length !in 10..13) {
-                txtTelefono.error = "El teléfono debe tener más de 9 y menos de 15 números"
-            }*/
+
+            if (!nombre.matches(Regex(validacionNombre))) {
+                txtNombre.error = "El nombre no es válido"
+            }
+
             if (correo.length !in 4..100) {
-                txtCorreo.error = "El correo electrónico debe tener más de 3 y ser menor o igual a 100 caracteres"
+                txtCorreo.error =
+                    "El correo electrónico debe tener más de 3 y ser menor o igual a 100 caracteres"
             }
-            if (contra.length !in 5..25) {
-                txtContra.error = "La contraseña debe tener más de 5 y ser menor o igual a 25 caracteres"
+            if (!correo.matches(Regex(validacionCorreo))) {
+                txtCorreo.error = "El correo electrónico no es válido"
             }
+            if (contra.length !in 8..25) {
+                txtContra.error = "La contraseña debe tener al menos 8 caracteres a 25 caracteres"
+            }
+
+            if (!contra.matches(Regex(validacionContra))) {
+                txtContra.error = "Contraseña no válida"
+            }
+
             if (confirmContra != contra) {
                 txtConfirmContra.error = "Las contraseñas no coinciden"
             }

@@ -82,7 +82,7 @@
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="222dp"
         android:layout_height="59dp"
-        android:text="¿Quieres saber mas acerca de nosotros?"
+        android:text="¿Quieres saber más acerca de nosotros?"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/cards"
         android:textColorLink="@color/cards"

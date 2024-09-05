@@ -82,6 +82,7 @@
             android:ems="10"
             android:inputType="text"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF" />
 
@@ -95,6 +96,7 @@
             android:ems="10"
             android:inputType="textPassword"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF" />
 
@@ -136,7 +138,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginTop="342dp"
             android:backgroundTint="@color/cards"
-            android:onClick="iniciarSesion"
+            android:onClick="registrarse"
             android:text="¿Es tu primera vez en nuestra página? Regístrate"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"

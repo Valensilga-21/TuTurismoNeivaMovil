@@ -5,9 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/_0240806133254103"
     tools:context=".olvidar_contra">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="330dp"
         android:layout_height="360dp"
         android:backgroundTint="@color/cards"
@@ -64,7 +66,11 @@
             android:layout_marginTop="225dp"
             android:background="@drawable/plain_text"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
 
         <Button
             android:id="@+id/button3"
@@ -82,5 +88,22 @@
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/volverInicioSesion"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="59dp"
+        android:layout_height="51dp"
+        android:text="Button"
+        app:icon="@drawable/arrow_left_circle_svgrepo_com"
+        app:iconGravity="textStart"
+        app:iconSize="35dp"
+        app:iconTint="@color/naranja"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

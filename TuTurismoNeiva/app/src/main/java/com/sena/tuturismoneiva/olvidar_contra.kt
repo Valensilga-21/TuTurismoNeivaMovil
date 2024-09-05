@@ -1,6 +1,7 @@
 package com.sena.tuturismoneiva
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +16,10 @@ class olvidar_contra : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        var volverInicioSesion: Button =findViewById<Button>(R.id.volverInicioSesion)
+        volverInicioSesion.setOnClickListener{
+            finish()
         }
     }
 }

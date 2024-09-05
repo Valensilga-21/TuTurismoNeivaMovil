@@ -61,6 +61,11 @@ class iniciarSesion : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun registrarse(view: View){
+        var intent = Intent(application, registrarse()::class.java)
+        startActivity(intent)
+    }
+
     fun ingresarInicio(view: View){
         var intent = Intent(application, menu::class.java)
         startActivity((intent))

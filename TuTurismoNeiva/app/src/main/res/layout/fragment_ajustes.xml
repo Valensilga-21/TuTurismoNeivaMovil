@@ -1,14 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ajustes">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="©2024 · TuTurismo Neiva "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="345dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="56dp"
+            android:backgroundTint="@color/cards"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="45dp"
+                android:backgroundTint="@color/cards"
+                android:src="@drawable/edit_3_svgrepo_com__1__1" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="345dp"
+            android:layout_height="284dp"
+            android:layout_marginBottom="124dp"
+            android:backgroundTint="@color/cards"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="312dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button12"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal|left|center_vertical"
+                    android:text="Idioma"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/world_svgrepo_com_1"
+                    app:iconGravity="textStart"
+                    app:iconSize="25dp"
+                    app:iconTint="@color/naranja" />
+
+                <Button
+                    android:id="@+id/button13"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal|center_vertical|end"
+                    app:icon="@drawable/arrow_next_small_svgrepo_com"
+                    app:iconSize="27dp"
+                    app:iconTint="@color/naranja" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="312dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="55dp"
+                android:orientation="horizontal"
+                tools:ignore="UseSwitchCompatOrMaterialXml">
+
+                <Button
+                    android:id="@+id/button14"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="262dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Modo oscuro"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/moon_svgrepo_com_1"
+                    app:iconGravity="textStart"
+                    app:iconSize="25dp" />
+
+                <Switch
+                    android:id="@+id/switch2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/naranja"
+                    android:thumbTint="@color/white"
+                    android:trackTint="#FF9B00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="312dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="95dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button16"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:text="Contacto"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/contact_book_svgrepo_com_2"
+                    app:iconGravity="textStart"
+                    app:iconSize="25dp"
+                    app:iconTintMode="multiply" />
+
+                <Button
+                    android:id="@+id/button17"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="44dp"
+                    android:layout_height="49dp"
+                    android:gravity="center"
+                    android:text="Button"
+                    app:icon="@drawable/arrow_next_small_svgrepo_com"
+                    app:iconSize="27dp"
+                    app:iconTint="@color/naranja" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="312dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="140dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button18"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Nosotros"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/users_svgrepo_com_1"
+                    app:iconGravity="textStart"
+                    app:iconSize="25dp" />
+
+                <Button
+                    android:id="@+id/button19"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:gravity="center"
+                    android:text="Button"
+                    app:icon="@drawable/arrow_next_small_svgrepo_com"
+                    app:iconSize="27dp"
+                    app:iconTint="@color/naranja" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="312dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="180dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button20"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:text="Ayuda"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/help_circle_svgrepo_com__1__2"
+                    app:iconGravity="textStart"
+                    app:iconSize="25dp"
+                    app:iconTint="@color/naranja" />
+
+                <Button
+                    android:id="@+id/button21"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="43dp"
+                    android:layout_height="38dp"
+                    android:gravity="center"
+                    android:text="Button"
+                    app:icon="@drawable/arrow_next_small_svgrepo_com"
+                    app:iconSize="27dp"
+                    app:iconTint="@color/naranja" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="315dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="216dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button22"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="267dp"
+                    android:layout_height="52dp"
+                    android:gravity="center|start"
+                    android:text="Cerrar Sesión"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/arrow_left_circle_svgrepo_com"
+                    app:iconGravity="textStart"
+                    app:iconSize="25dp"
+                    app:iconTint="@color/naranja"
+                    app:iconTintMode="src_in" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

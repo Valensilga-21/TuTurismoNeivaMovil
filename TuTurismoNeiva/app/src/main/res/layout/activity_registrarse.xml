@@ -55,6 +55,7 @@
             android:inputType="text"
             android:paddingStart="10dp"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="16sp" />
@@ -81,6 +82,7 @@
             android:ems="10"
             android:inputType="text"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="16sp" />
@@ -107,6 +109,7 @@
             android:ems="10"
             android:inputType="textEmailAddress"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="16sp" />
@@ -132,6 +135,7 @@
             android:background="@drawable/plain_text"
             android:inputType="textPassword"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="16sp" />
@@ -157,6 +161,7 @@
             android:background="@drawable/plain_text"
             android:inputType="textPassword"
             android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="16sp" />
