@@ -1,31 +1,19 @@
 package com.sena.tuturismoneiva
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ajustes.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ajustes : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            // Obtén los parámetros si es necesario
         }
     }
 
@@ -33,20 +21,81 @@ class ajustes : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ajustes, container, false)
+        // Infla el layout para este fragmento
+        val view = inflater.inflate(R.layout.fragment_ajustes, container, false)
+
+        // Encuentra el botón en el layout del fragmento
+        val btnContacto = view.findViewById<Button>(R.id.btnContacto)
+        btnContacto.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoContacto()
+        }
+
+        val btnContacto2 = view.findViewById<Button>(R.id.btnContacto2)
+        btnContacto2.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoContacto()
+        }
+
+        val btnMision = view.findViewById<Button>(R.id.btnNosotros)
+        btnMision.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoNosotros()
+        }
+
+        val btnMision2 = view.findViewById<Button>(R.id.btnNosotros2)
+        btnMision2.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoNosotros()
+        }
+
+        return view
+    }
+
+    private fun cambiarAFragmentoContacto() {
+        // Crea una nueva instancia del fragmento de contacto
+        val fragmentContacto = contacto()
+
+        // Obtén el FragmentManager
+        val fragmentManager = parentFragmentManager
+
+        // Inicia una transacción de fragmentos
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+        // Reemplaza el fragmento actual con el nuevo fragmento
+        transaction.replace(R.id.fragment_container, fragmentContacto)
+
+        // Agrega la transacción a la pila de retroceso (opcional)
+        transaction.addToBackStack(null)
+
+        // Confirma la transacción
+        transaction.commit()
+    }
+
+    private fun cambiarAFragmentoNosotros() {
+        // Crea una nueva instancia del fragmento de contacto
+        val fragmentNosotros = nosotros()
+
+        // Obtén el FragmentManager
+        val fragmentManager = parentFragmentManager
+
+        // Inicia una transacción de fragmentos
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+        // Reemplaza el fragmento actual con el nuevo fragmento
+        transaction.replace(R.id.fragment_container, fragmentNosotros)
+
+        // Agrega la transacción a la pila de retroceso (opcional)
+        transaction.addToBackStack(null)
+
+        // Confirma la transacción
+        transaction.commit()
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ajustes.
-         */
-        // TODO: Rename and change types and number of parameters
+        private const val ARG_PARAM1 = "param1"
+        private const val ARG_PARAM2 = "param2"
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             ajustes().apply {

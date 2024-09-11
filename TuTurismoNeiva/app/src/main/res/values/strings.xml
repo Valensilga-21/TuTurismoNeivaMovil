@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TuTurismo Neiva</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mision">Misión</string>
+    <string name="vision">Visión</string>
+    <string name="textoMision">Promover la apropiación de la cultura Neivana mediante sus sitios turísticos y monumentos, recopilando y dando a conocer la historia que hay detrás de cada uno de ellos, su importancia, cuantos hay, cuáles son los más visitados y cuales se han olvidado.</string>
+    <string name="textoVision">Llegar a ser un sitio web reconocido a nivel nacional, por la información verídica que ofrecemos a nuestros usuarios, presentando innovadoras estrategias de marketing y asegurando una actividad turística estable, promoviendo en el sector social y económico de la ciudad.</string>
 </resources>

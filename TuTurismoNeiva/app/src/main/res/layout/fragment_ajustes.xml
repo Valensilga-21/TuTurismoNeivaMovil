@@ -2,13 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/_0240806133254103"
     tools:context=".ajustes">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/textView9"
@@ -31,7 +34,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.9" >
+            app:layout_constraintVertical_bias="0.9">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -41,14 +44,38 @@
                 android:layout_marginTop="12dp"
                 tools:src="@tools:sample/avatars" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
+            <TextView
+                android:id="@+id/txtNombreUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="45dp"
-                android:backgroundTint="@color/cards"
-                android:src="@drawable/edit_3_svgrepo_com__1__1" />
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="30dp"
+                android:text="Isabela Córdoba"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="51dp"
+                android:text="dikathe06@gmail.com"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="275dp"
+                android:layout_marginTop="25dp"
+                app:icon="@drawable/arrow_next_small_svgrepo_com"
+                app:iconSize="35dp"
+                app:iconTint="@color/naranja" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -77,6 +104,8 @@
                     android:gravity="center|center_horizontal|left|center_vertical"
                     android:text="Idioma"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/world_svgrepo_com_1"
@@ -89,6 +118,7 @@
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center|center_horizontal|center_vertical|end"
                     app:icon="@drawable/arrow_next_small_svgrepo_com"
                     app:iconSize="27dp"
@@ -117,7 +147,8 @@
                     android:textStyle="bold"
                     app:icon="@drawable/moon_svgrepo_com_1"
                     app:iconGravity="textStart"
-                    app:iconSize="25dp" />
+                    app:iconSize="25dp"
+                    app:iconTint="#FFFFFF" />
 
                 <Switch
                     android:id="@+id/switch2"
@@ -137,11 +168,12 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button16"
+                    android:id="@+id/btnContacto"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="267dp"
                     android:layout_height="wrap_content"
                     android:gravity="center|start"
+                    android:onClick="contacto"
                     android:text="Contacto"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
@@ -151,14 +183,16 @@
                     app:icon="@drawable/contact_book_svgrepo_com_2"
                     app:iconGravity="textStart"
                     app:iconSize="25dp"
+                    app:iconTint="#FFFFFF"
                     app:iconTintMode="multiply" />
 
                 <Button
-                    android:id="@+id/button17"
+                    android:id="@+id/btnContacto2"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="44dp"
                     android:layout_height="49dp"
                     android:gravity="center"
+                    android:onClick="contacto"
                     android:text="Button"
                     app:icon="@drawable/arrow_next_small_svgrepo_com"
                     app:iconSize="27dp"
@@ -173,7 +207,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button18"
+                    android:id="@+id/btnNosotros"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="267dp"
                     android:layout_height="wrap_content"
@@ -186,10 +220,11 @@
                     android:textStyle="bold"
                     app:icon="@drawable/users_svgrepo_com_1"
                     app:iconGravity="textStart"
-                    app:iconSize="25dp" />
+                    app:iconSize="25dp"
+                    app:iconTint="#FFFFFF" />
 
                 <Button
-                    android:id="@+id/button19"
+                    android:id="@+id/btnNosotros2"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
@@ -258,7 +293,7 @@
                     app:icon="@drawable/arrow_left_circle_svgrepo_com"
                     app:iconGravity="textStart"
                     app:iconSize="25dp"
-                    app:iconTint="@color/naranja"
+                    app:iconTint="@color/white"
                     app:iconTintMode="src_in" />
 
             </LinearLayout>

@@ -23,7 +23,7 @@
         android:layout_height="75dp"
         android:background="@color/cards"
         app:itemIconTint="@color/naranja"
-        app:itemIconSize="35dp"
+        app:itemIconSize="33dp"
         app:itemTextColor="@color/naranja"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

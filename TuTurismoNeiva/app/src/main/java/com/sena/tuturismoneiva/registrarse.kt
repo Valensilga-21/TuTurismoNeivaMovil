@@ -48,42 +48,53 @@ class registrarse : AppCompatActivity() {
             val correo = txtCorreo.text.toString()
             val contra = txtContra.text.toString()
             val confirmContra = txtConfirmContra.text.toString()
+            var formularioValido=true
 
             if (nombre.length !in 3..60) {
                 txtNombre.error = "El nombre debe tener más de 2 y menos de 60 caracteres"
+                formularioValido=false
             }
 
             if (!nombre.matches(Regex(validacionNombre))) {
                 txtNombre.error = "El nombre no es válido"
+                formularioValido=false
             }
 
             if (correo.length !in 4..100) {
                 txtCorreo.error =
                     "El correo electrónico debe tener más de 3 y ser menor o igual a 100 caracteres"
+                formularioValido=false
             }
             if (!correo.matches(Regex(validacionCorreo))) {
                 txtCorreo.error = "El correo electrónico no es válido"
+                formularioValido=false
             }
             if (contra.length !in 8..25) {
                 txtContra.error = "La contraseña debe tener al menos 8 caracteres a 25 caracteres"
+                formularioValido=false
             }
 
             if (!contra.matches(Regex(validacionContra))) {
                 txtContra.error = "Contraseña no válida"
+                formularioValido=false
             }
 
             if (confirmContra != contra) {
                 txtConfirmContra.error = "Las contraseñas no coinciden"
+                formularioValido=false
             }
 
             if (confirmContra.isEmpty()) {
                 txtConfirmContra.error = "Este es un campo obligatorio"
+                formularioValido=false
             }
             /*
             if (txtNombre.error == null && txtTelefono.error == null && txtCorreo.error == null && txtContra.error == null && txtConfirmContra.error == null) {
                 registrarUsuario(nombre, correo, contra, confirmContra)
             }*/
-            registrarUsuario()
+            if(formularioValido) {
+                registrarUsuario()
+            }
         }
     }
 

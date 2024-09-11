@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".contacto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="319dp"
+            android:layout_height="422dp"
+            app:cardBackgroundColor="@color/cards"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="40dp"
+                android:text="Contáctanos"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="37sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="85dp"
+                android:text="¡Trabajemos juntos!"
+                android:textColor="@color/naranja"
+                android:textColorLink="@color/naranja"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="237dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="130dp"
+                android:text="Si deseas consultar mayor información sobre nuestra página o tienes alguna duda al respecto te invitamos a que te contactes con nosotros."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="192dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="260dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button23"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="47dp"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/phone_svgrepo_com"
+                    app:iconGravity="textStart"
+                    app:iconSize="33dp"
+                    app:iconTintMode="multiply" />
+
+                <Button
+                    android:id="@+id/button25"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="47dp"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/gmail_svgrepo_com"
+                    app:iconGravity="textStart"
+                    app:iconSize="33dp"
+                    app:iconTintMode="multiply" />
+
+                <Button
+                    android:id="@+id/button26"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="47dp"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/instagram_svgrepo_com"
+                    app:iconGravity="textStart"
+                    app:iconSize="33dp"
+                    app:iconTintMode="multiply" />
+
+                <Button
+                    android:id="@+id/button24"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="47dp"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/whatsapp_icon_logo_svgrepo_com__1_"
+                    app:iconGravity="textStart"
+                    app:iconSize="33dp"
+                    app:iconTintMode="multiply" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="330dp"
+                android:text="¿Te gustaría subir contenido de tu empresa con nosotros?"
+                android:textAlignment="center"
+                android:textColor="@color/naranja"
+                android:textColorLink="@color/naranja"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/volverContacto"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="56dp"
+            android:layout_height="45dp"
+            app:icon="@drawable/arrow_left_circle_svgrepo_com"
+            app:iconGravity="textStart"
+            app:iconSize="35dp"
+            app:iconTint="@color/naranja"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.039" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

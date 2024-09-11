@@ -32,7 +32,8 @@
             android:textSize="16dp"
             android:textStyle="bold"
             app:icon="@drawable/account_svgrepo_com"
-            app:iconSize="20dp" />
+            app:iconSize="20dp"
+            app:iconTint="@color/white" />
 
         <Button
             android:id="@+id/button5"
@@ -47,7 +48,8 @@
             android:textSize="16dp"
             android:textStyle="bold"
             app:icon="@drawable/form_svgrepo_com"
-            app:iconSize="20dp" />
+            app:iconSize="20dp"
+            app:iconTint="@color/white" />
 
         <Button
             android:id="@+id/button6"
@@ -62,7 +64,8 @@
             android:textSize="16dp"
             android:textStyle="bold"
             app:icon="@drawable/user_alt_1_svgrepo_com"
-            app:iconSize="20dp" />
+            app:iconSize="20dp"
+            app:iconTint="@color/white" />
     </LinearLayout>
 
     <ImageView
