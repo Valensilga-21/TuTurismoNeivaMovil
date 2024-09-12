@@ -10,8 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textView9"
@@ -36,14 +35,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.9">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="80dp"
-                android:layout_height="75dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="12dp"
-                tools:src="@tools:sample/avatars" />
-
             <TextView
                 android:id="@+id/txtNombreUsuario"
                 android:layout_width="wrap_content"
@@ -67,7 +58,7 @@
                 android:textColorLink="#FFFFFF" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnPerfil"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
@@ -76,18 +67,34 @@
                 app:icon="@drawable/arrow_next_small_svgrepo_com"
                 app:iconSize="35dp"
                 app:iconTint="@color/naranja" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/_0491854" />
+            </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="345dp"
             android:layout_height="284dp"
-            android:layout_marginBottom="124dp"
+            android:layout_marginBottom="104dp"
             android:backgroundTint="@color/cards"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/textView9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <LinearLayout
                 android:layout_width="312dp"
@@ -97,12 +104,12 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button12"
+                    android:id="@+id/btnIdioma"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="267dp"
                     android:layout_height="wrap_content"
                     android:gravity="center|center_horizontal|left|center_vertical"
-                    android:text="Idioma"
+                    android:text="@string/idioma"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
@@ -114,7 +121,7 @@
                     app:iconTint="@color/naranja" />
 
                 <Button
-                    android:id="@+id/button13"
+                    android:id="@+id/btnIdioma2"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -136,10 +143,10 @@
                 <Button
                     android:id="@+id/button14"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="262dp"
+                    android:layout_width="268dp"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
-                    android:text="Modo oscuro"
+                    android:text="@string/modoOscuro"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
@@ -152,7 +159,7 @@
 
                 <Switch
                     android:id="@+id/switch2"
-                    android:layout_width="57dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/naranja"
                     android:thumbTint="@color/white"
@@ -174,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center|start"
                     android:onClick="contacto"
-                    android:text="Contacto"
+                    android:text="@string/contacto"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
@@ -212,7 +219,7 @@
                     android:layout_width="267dp"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
-                    android:text="Nosotros"
+                    android:text="@string/nosotros"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
@@ -248,7 +255,7 @@
                     android:layout_width="267dp"
                     android:layout_height="wrap_content"
                     android:gravity="center|start"
-                    android:text="Ayuda"
+                    android:text="@string/ayuda"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
@@ -284,7 +291,7 @@
                     android:layout_width="267dp"
                     android:layout_height="52dp"
                     android:gravity="center|start"
-                    android:text="Cerrar Sesión"
+                    android:text="@string/cerrarSesion"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"

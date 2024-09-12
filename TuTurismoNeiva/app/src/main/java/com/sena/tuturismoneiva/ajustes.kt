@@ -49,7 +49,45 @@ class ajustes : Fragment() {
             cambiarAFragmentoNosotros()
         }
 
+        val btnPerfil = view.findViewById<Button>(R.id.btnPerfil)
+        btnPerfil.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoPerfil()
+        }
+
+        val btnIdioma = view.findViewById<Button>(R.id.btnIdioma)
+        btnIdioma.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoIdioma()
+        }
+
+        val btnIdioma2 = view.findViewById<Button>(R.id.btnIdioma2)
+        btnIdioma2.setOnClickListener {
+            // Cambia al fragmento de contacto
+            cambiarAFragmentoIdioma()
+        }
+
         return view
+    }
+
+    private fun cambiarAFragmentoIdioma() {
+        // Crea una nueva instancia del fragmento de contacto
+        val fragmentIdioma = idioma()
+
+        // Obtén el FragmentManager
+        val fragmentManager = parentFragmentManager
+
+        // Inicia una transacción de fragmentos
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+        // Reemplaza el fragmento actual con el nuevo fragmento
+        transaction.replace(R.id.fragment_container, fragmentIdioma)
+
+        // Agrega la transacción a la pila de retroceso (opcional)
+        transaction.addToBackStack(null)
+
+        // Confirma la transacción
+        transaction.commit()
     }
 
     private fun cambiarAFragmentoContacto() {
@@ -84,6 +122,26 @@ class ajustes : Fragment() {
 
         // Reemplaza el fragmento actual con el nuevo fragmento
         transaction.replace(R.id.fragment_container, fragmentNosotros)
+
+        // Agrega la transacción a la pila de retroceso (opcional)
+        transaction.addToBackStack(null)
+
+        // Confirma la transacción
+        transaction.commit()
+    }
+
+    private fun cambiarAFragmentoPerfil() {
+        // Crea una nueva instancia del fragmento de contacto
+        val fragmentPerfil = editarPerfil()
+
+        // Obtén el FragmentManager
+        val fragmentManager = parentFragmentManager
+
+        // Inicia una transacción de fragmentos
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+        // Reemplaza el fragmento actual con el nuevo fragmento
+        transaction.replace(R.id.fragment_container, fragmentPerfil)
 
         // Agrega la transacción a la pila de retroceso (opcional)
         transaction.addToBackStack(null)

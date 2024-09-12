@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TuTurismo Neiva</string>
+    <string name="mision">Misión</string>
+    <string name="vision">Visión</string>
+    <string name="textoMision">Promover la apropiación de la cultura Neivana mediante sus sitios turísticos y monumentos, recopilando y dando a conocer la historia que hay detrás de cada uno de ellos, su importancia, cuantos hay, cuáles son los más visitados y cuales se han olvidado.</string>
+    <string name="textoVision">Llegar a ser un sitio web reconocido a nivel nacional, por la información verídica que ofrecemos a nuestros usuarios, presentando innovadoras estrategias de marketing y asegurando una actividad turística estable, promoviendo en el sector social y económico de la ciudad.</string>
+    <string name="nombre">Nombre completo</string>
+    <string name="correo">Correo</string>
+    <string name="cambiarcontraseña">Cambiar contraseña</string>
+    <string name="idioma">Idioma</string>
+    <string name="modoOscuro">Modo oscuro</string>
+    <string name="contacto">Contacto</string>
+    <string name="nosotros">Nosotros</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="confirmarContraseña">Confirmar contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="olvidarContra">¿Olvidaste tu contraseña?</string>
+    <string name="primervezregi">¿Es tu primera vez en nuestra página? Regístrate</string>
+    <string name="iniciaSesión">Inicia Sesión</string>
+    <string name="registrase">Registrarse</string>
+    <string name="invitado">Invitado</string>
+    <string name="masdenosotros">¿Quieres saber más acerca de nosotros?</string>
+    <string name="ingresaDatosPer">Ingresa tus datos personales</string>
+    <string name="eligetuidioma">Elige tu idioma</string>
+    <string name="español">Español</string>
+    <string name="ingles">Inglés</string>
+    <string name="iniciaInvitado">Inicia como invitado</string>
+    <string name="nombreUsuario">Elige un nombre de usuario</string>
+    <string name="continuar">Continuar</string>
+    <string name="olvidarContraPregunta">¿Olvidaste tu contraseña?</string>
+    <string name="avisoOlvidarContra">Por favor ingresa tu dirección de correo. Te enviaremos las instrucciones para que puedas restablecer tu contraseña.</string>
+    <string name="ingresaTuCorreo">Ingresa tu correo electrónico</string>
+    <string name="recuperarContra">Recuperar contraseña</string>
+    <string name="contactanos">Contáctanos</string>
+    <string name="trabajemosJun">¡Trabajemos juntos!</string>
+    <string name="mensajeContac">Si deseas consultar mayor información sobre nuestra página o tienes alguna duda al respecto, te invitamos a que te contactes con nosotros.</string>
+    <string name="mensajeEmpresa">¿Te gustaría subir contenido de tu empresa con nosotros?</string>
+    <string name="sitios">Sitios turísticos</string>
+    <string name="monumentos">Monumentos</string>
+    <string name="misSitios">Mis Sitios</string>
+    <string name="guardar">Guardar</string>
+</resources>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +34,17 @@ class editarPerfil : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_editar_perfil, container, false)
+        // Infla el layout para este fragmento
+        val view = inflater.inflate(R.layout.fragment_editar_perfil, container, false)
+
+        // Configura el botón para volver
+        val btnBack = view.findViewById<Button>(R.id.volverPerfil)
+        btnBack.setOnClickListener {
+            // Maneja el botón de retroceso
+            requireActivity().onBackPressed()
+        }
+
+        return view
     }
 
     companion object {

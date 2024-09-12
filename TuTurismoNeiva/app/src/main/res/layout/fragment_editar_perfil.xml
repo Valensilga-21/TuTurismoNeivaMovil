@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/_0240806133254103"
     tools:context=".editarPerfil">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,51 +12,181 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
             android:layout_width="319dp"
-            android:layout_height="427dp"
+            android:layout_height="400dp"
             android:backgroundTint="@color/cards"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.561">
 
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="86dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginLeft="84dp"
+                android:layout_marginTop="78dp"
                 android:text="Isabela Córdoba"
                 android:textColor="#FFFFFF"
                 android:textColorLink="#FFFFFF"
-                android:textSize="20dp" />
-        </androidx.cardview.widget.CardView>
+                android:textSize="22dp"
+                android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="263dp"
-            android:layout_height="34dp"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="42dp">
+            <LinearLayout
+                android:layout_width="69dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="135dp"
+                android:layout_marginTop="112dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="44dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                app:icon="@drawable/photo_camera_svgrepo_com"
-                app:iconGravity="textStart"
-                app:iconSize="25dp"
-                app:iconTint="@color/white" />
+                <Button
+                    android:id="@+id/button16"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="33dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:icon="@drawable/photo_camera_svgrepo_com"
+                    app:iconGravity="textStart"
+                    app:iconSize="27dp"
+                    app:iconTint="@color/white" />
 
-            <Button
-                android:id="@+id/button17"
+                <Button
+                    android:id="@+id/button17"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:icon="@drawable/delete_2_svgrepo_com"
+                    app:iconGravity="textStart"
+                    app:iconSize="27dp"
+                    app:iconTint="#F44336" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button"
-                app:icon="@drawable/delete_2_svgrepo_com" />
-        </LinearLayout>
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="150dp"
+                android:src="@drawable/line_2" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="170dp"
+                android:text="@string/nombre"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextText3"
+                android:layout_width="237dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="195dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="237dp"
+                android:text="@string/correo"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextText4"
+                android:layout_width="237dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="260dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+
+            <Button
+                android:id="@+id/button18"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="330dp"
+                android:backgroundTint="@color/naranja"
+                android:text="@string/cambiarcontraseña"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button19"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="231dp"
+                android:layout_marginTop="322dp"
+                app:icon="@drawable/save_storage_folder_svgrepo_com"
+                app:iconSize="32dp"
+                app:iconTint="#FFFFFF" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.183">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/_0491854" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/volverPerfil"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/arrow_left_circle_svgrepo_com"
+            app:iconSize="35dp"
+            app:iconTint="@color/naranja"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.002"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

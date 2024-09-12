@@ -1,9 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TuTurismo Neiva</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="mision">Misión</string>
-    <string name="vision">Visión</string>
-    <string name="textoMision">Promover la apropiación de la cultura Neivana mediante sus sitios turísticos y monumentos, recopilando y dando a conocer la historia que hay detrás de cada uno de ellos, su importancia, cuantos hay, cuáles son los más visitados y cuales se han olvidado.</string>
-    <string name="textoVision">Llegar a ser un sitio web reconocido a nivel nacional, por la información verídica que ofrecemos a nuestros usuarios, presentando innovadoras estrategias de marketing y asegurando una actividad turística estable, promoviendo en el sector social y económico de la ciudad.</string>
+    <string name="mision">Mission</string>
+    <string name="vision">Vision</string>
+    <string name="textoMision">Promote the appropriation of Neivan culture through its tourist sites and monuments, gathering and sharing the history behind each of them, their importance, how many there are, which are the most visited, and which have been forgotten.</string>
+    <string name="textoVision">Become a nationally recognized website for the accurate information we provide to our users, presenting innovative marketing strategies and ensuring stable tourism activity, promoting the social and economic sector of the city.</string>
+    <string name="nombre">Full Name</string>
+    <string name="correo">Email</string>
+    <string name="cambiarcontraseña">Change Password</string>
+    <string name="idioma">Language</string>
+    <string name="modoOscuro">Dark Mode</string>
+    <string name="contacto">Contact</string>
+    <string name="nosotros">About Us</string>
+    <string name="ayuda">Help</string>
+    <string name="cerrarSesion">Sign Out</string>
+    <string name="contraseña">Password</string>
+    <string name="confirmarContraseña">Confirm Password</string>
+    <string name="ingresar">Sign In</string>
+    <string name="olvidarContra">Forgot Your Password?</string>
+    <string name="primervezregi">Is this your first time on our page? Register</string>
+    <string name="iniciaSesión">Sign In</string>
+    <string name="registrase">Register</string>
+    <string name="invitado">Guest</string>
+    <string name="masdenosotros">Want to know more about us?</string>
+    <string name="ingresaDatosPer">Enter your personal data</string>
+    <string name="eligetuidioma">Choose your language</string>
+    <string name="español">Spanish</string>
+    <string name="ingles">English</string>
+    <string name="iniciaInvitado">Sign in as guest</string>
+    <string name="nombreUsuario">Choose a username</string>
+    <string name="continuar">Continue</string>
+    <string name="olvidarContraPregunta">Forgot your password?</string>
+    <string name="avisoOlvidarContra">Please enter your email address. We will send you instructions to reset your password.</string>
+    <string name="ingresaTuCorreo">Enter your email address</string>
+    <string name="recuperarContra">Recover Password</string>
+    <string name="contactanos">Contact Us</string>
+    <string name="trabajemosJun">Let\'s work together!</string>
+    <string name="mensajeContac">If you need more information about our page or have any questions, please contact us.</string>
+    <string name="mensajeEmpresa">Would you like to upload content about your company with us?</string>
+    <string name="sitios">Tourist Sites</string>
+    <string name="monumentos">Monuments</string>
+    <string name="misSitios">My Sites</string>
+    <string name="guardar">Save</string>
 </resources>
