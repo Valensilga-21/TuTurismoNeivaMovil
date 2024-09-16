@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".sitios">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="345dp"
+            android:layout_height="380dp"
+            app:columnCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="162dp"
+                android:layout_height="224dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/white"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:layout_column="0"
+                app:layout_row="0">
+
+                <Button
+                    android:id="@+id/button32"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="129dp"
+                    android:layout_marginTop="193dp"
+                    app:icon="@drawable/heart_fill_svgrepo_com__1_"
+                    app:iconGravity="textTop"
+                    app:iconSize="13dp"
+                    app:iconTint="#FFFFFF"
+                    app:iconTintMode="multiply" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="140dp"
+                    android:text="El Mohán"
+                    android:textColor="@color/cards"
+                    android:textColorLink="@color/cards"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="160dp"
+                    android:text="Carrera 7 con Calle 2 Sur, Glorieta al Terminal"
+                    android:textColor="@color/cards"
+                    android:textColorLink="@color/cards"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="56dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="195dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button27"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="11dp"
+                        android:layout_height="20dp"
+                        app:icon="@drawable/star_svgrepo_com"
+                        app:iconGravity="textTop"
+                        app:iconSize="10dp"
+                        app:iconTint="@color/naranja" />
+
+                    <Button
+                        android:id="@+id/button28"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="11dp"
+                        android:layout_height="20dp"
+                        app:icon="@drawable/star_svgrepo_com"
+                        app:iconGravity="textTop"
+                        app:iconSize="10dp"
+                        app:iconTint="@color/naranja" />
+
+                    <Button
+                        android:id="@+id/button29"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="11dp"
+                        android:layout_height="20dp"
+                        app:icon="@drawable/star_svgrepo_com"
+                        app:iconGravity="textTop"
+                        app:iconSize="10dp"
+                        app:iconTint="@color/naranja" />
+
+                    <Button
+                        android:id="@+id/button30"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="11dp"
+                        android:layout_height="20dp"
+                        app:icon="@drawable/star_svgrepo_com"
+                        app:iconGravity="textTop"
+                        app:iconSize="10dp"
+                        app:iconTint="@color/naranja" />
+
+                    <Button
+                        android:id="@+id/button31"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="11dp"
+                        android:layout_height="20dp"
+                        app:icon="@drawable/star_svgrepo_com"
+                        app:iconGravity="textTop"
+                        app:iconSize="10dp"
+                        app:iconTint="@color/naranja" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="162dp"
+                android:layout_height="224dp"
+                android:backgroundTint="@color/white"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:layout_column="1"
+                app:layout_row="0" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

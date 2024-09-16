@@ -37,7 +37,6 @@ class registrarse : AppCompatActivity() {
 
 
         txtNombre = findViewById(R.id.txtNombre)
-        //txtTelefono = findViewById(R.id.txtTelefono)
         txtCorreo = findViewById(R.id.txtCorreo)
         txtContra = findViewById(R.id.txtContra)
         txtConfirmContra = findViewById(R.id.txtConfirmContra)
@@ -108,7 +107,7 @@ class registrarse : AppCompatActivity() {
 
             val request = JsonObjectRequest(
                 Request.Method.POST,
-                config.urlUsuario,
+                config.urlUsuario+"registro/",
                 parametros,
                 { response ->
                     Toast.makeText(

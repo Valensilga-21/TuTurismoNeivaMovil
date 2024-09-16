@@ -74,6 +74,7 @@
                     app:icon="@drawable/phone_svgrepo_com"
                     app:iconGravity="textStart"
                     app:iconSize="33dp"
+                    app:iconTint="#FFFFFF"
                     app:iconTintMode="multiply" />
 
                 <Button
@@ -84,6 +85,7 @@
                     app:icon="@drawable/gmail_svgrepo_com"
                     app:iconGravity="textStart"
                     app:iconSize="33dp"
+                    app:iconTint="#FFFFFF"
                     app:iconTintMode="multiply" />
 
                 <Button
@@ -94,6 +96,7 @@
                     app:icon="@drawable/instagram_svgrepo_com"
                     app:iconGravity="textStart"
                     app:iconSize="33dp"
+                    app:iconTint="#FFFFFF"
                     app:iconTintMode="multiply" />
 
                 <Button
@@ -104,6 +107,7 @@
                     app:icon="@drawable/whatsapp_icon_logo_svgrepo_com__1_"
                     app:iconGravity="textStart"
                     app:iconSize="33dp"
+                    app:iconTint="#FFFFFF"
                     app:iconTintMode="multiply" />
 
             </LinearLayout>
