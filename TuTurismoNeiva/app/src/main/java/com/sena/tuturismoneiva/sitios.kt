@@ -1,31 +1,32 @@
 package com.sena.tuturismoneiva
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ViewFlipper
+import androidx.fragment.app.Fragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [sitios.newInstance] factory method to
- * create an instance of this fragment.
- */
 class sitios : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var viewFlipper: ViewFlipper
+    private val handler = Handler()
+    private val runnable = object : Runnable {
+        override fun run() {
+            viewFlipper.showNext() // Cambia a la siguiente imagen
+            handler.postDelayed(this, 2000) // Cambia de imagen cada 3 segundos
+        }
+    }
+
+    // Definición de los argumentos
+    private val ARG_PARAM1 = "param1"
+    private val ARG_PARAM2 = "param2"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            // Manejo de argumentos si es necesario
         }
     }
 
@@ -33,20 +34,25 @@ class sitios : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sitios, container, false)
+        val view = inflater.inflate(R.layout.fragment_sitios, container, false)
+
+        // Inicializa el ViewFlipper
+        viewFlipper = view.findViewById(R.id.viewFlipper)
+
+        return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handler.postDelayed(runnable, 3000) // Comienza el carrusel al reanudar el fragmento
+    }
+
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacks(runnable) // Detiene el carrusel al pausar el fragmento
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment sitios.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             sitios().apply {
