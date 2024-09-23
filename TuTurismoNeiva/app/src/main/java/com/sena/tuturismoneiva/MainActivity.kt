@@ -1,6 +1,8 @@
 package com.sena.tuturismoneiva
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
@@ -13,9 +15,14 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Aplicar el idioma guardado antes de cargar el layout
+        aplicarIdiomaGuardado()
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        // Manejo de padding para ajustar a los insets del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -23,37 +30,33 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun iniciarSesion(view: View){
-        var intent = Intent(application, iniciarSesion::class.java)
-        startActivity(intent)
-    }
+    // Función para cambiar de idioma y aplicar la configuración
+    private fun aplicarIdiomaGuardado() {
+        val sharedPreferences: SharedPreferences = getSharedPreferences("configuracion_idioma", Context.MODE_PRIVATE)
+        val idiomaGuardado = sharedPreferences.getString("idioma", "es") // Por defecto español
 
-    fun registrarse(view: View){
-        var intent = Intent(application, registrarse::class.java)
-        startActivity(intent)
-    }
+        val locale = Locale(idiomaGuardado!!)
+        Locale.setDefault(locale)
 
-    fun invitado(view: View){
-        var intent = Intent(application, invitado::class.java)
-        startActivity(intent)
-    }
-
-    // Add the language change functionality
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        // Guarda datos aquí
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        setContentView(R.layout.activity_main) // Reemplaza con tu diseño de actividad
-        // Inicializa vistas y restaura su estado aquí
-    }
-
-    fun changeLanguage(locale: Locale) {
         val config = resources.configuration
-        config.locale = locale
+        config.setLocale(locale)
+
         resources.updateConfiguration(config, resources.displayMetrics)
-        recreate()
+    }
+
+    // Funciones para los botones de la UI
+    fun iniciarSesion(view: View) {
+        val intent = Intent(application, iniciarSesion::class.java)
+        startActivity(intent)
+    }
+
+    fun registrarse(view: View) {
+        val intent = Intent(application, registrarse::class.java)
+        startActivity(intent)
+    }
+
+    fun invitado(view: View) {
+        val intent = Intent(application, invitado::class.java)
+        startActivity(intent)
     }
 }

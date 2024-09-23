@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Inicio"
+    <item android:title="@string/inicio"
         android:id="@+id/inicio"
         android:icon="@drawable/home_svgrepo_com"/>
-    <item android:title="Mis Sitios"
+    <item android:title="@string/misSitios"
         android:id="@+id/mis_sitios"
         android:icon="@drawable/heart_fill_svgrepo_com"/>
-    <item android:title="Ajustes"
+    <item android:title="@string/ajustes"
         android:id="@+id/ajustes"
         android:icon="@drawable/svgrepo_iconcarrier__1_"/>
 </menu>

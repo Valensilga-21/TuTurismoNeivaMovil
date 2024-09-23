@@ -42,4 +42,7 @@
     <string name="monumentos">Monumentos</string>
     <string name="misSitios">Mis Sitios</string>
     <string name="guardar">Guardar</string>
+    <string name="inicio">Inicio</string>
+    <string name="ajustes">Configuración</string>
+
 </resources>
