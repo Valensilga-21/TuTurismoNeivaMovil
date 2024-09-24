@@ -1,69 +1,120 @@
 package com.sena.tuturismoneiva
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.Toast
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [editarPerfil.newInstance] factory method to
- * create an instance of this fragment.
- */
 class editarPerfil : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val PICK_IMAGE = 100
+    private lateinit var imageViewPerfil: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Infla el layout para este fragmento
         val view = inflater.inflate(R.layout.fragment_editar_perfil, container, false)
 
         // Configura el botón para volver
         val btnBack = view.findViewById<Button>(R.id.volverPerfil)
         btnBack.setOnClickListener {
-            // Maneja el botón de retroceso
             requireActivity().onBackPressed()
         }
+
+        // Configura el botón para seleccionar la foto
+        imageViewPerfil = view.findViewById(R.id.fotoPerfil)
+        val btnCamara = view.findViewById<Button>(R.id.btnCamara)
+        btnCamara.setOnClickListener {
+            selectImage()
+        }
+
+        // Configura el botón para eliminar la foto
+        val btnEliminarFoto = view.findViewById<Button>(R.id.btnEliminarFoto)
+        btnEliminarFoto.setOnClickListener {
+            deleteImage()
+        }
+
+        // Cargar la imagen guardada al iniciar el fragmento
+        loadImageFromInternalStorage()
 
         return view
     }
 
+    private fun selectImage() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, PICK_IMAGE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == PICK_IMAGE && resultCode == Activity.RESULT_OK && data != null) {
+            val imageUri: Uri? = data.data
+            imageViewPerfil.setImageURI(imageUri)
+
+            // Guardar la imagen en almacenamiento interno
+            imageUri?.let { saveImageToInternalStorage(it) }
+        } else {
+            Toast.makeText(context, "Error al seleccionar la imagen", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun saveImageToInternalStorage(imageUri: Uri) {
+        try {
+            val inputStream = requireActivity().contentResolver.openInputStream(imageUri)
+            val bitmap = BitmapFactory.decodeStream(inputStream)
+
+            val filename = "profile_image.png"
+            val outputStream = requireActivity().openFileOutput(filename, Context.MODE_PRIVATE)
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            outputStream.close()
+
+            Toast.makeText(context, "Imagen guardada exitosamente", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(context, "Error al guardar la imagen", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun loadImageFromInternalStorage() {
+        try {
+            val filename = "profile_image.png"
+            val fileInputStream = requireActivity().openFileInput(filename)
+            val bitmap = BitmapFactory.decodeStream(fileInputStream)
+            imageViewPerfil.setImageBitmap(bitmap)
+            fileInputStream.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(context, "No se encontró la imagen guardada", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun deleteImage() {
+        try {
+            val filename = "profile_image.png"
+            requireActivity().deleteFile(filename)
+            imageViewPerfil.setImageResource(0) // Limpiar la imagen del ImageView
+            Toast.makeText(context, "Imagen eliminada exitosamente", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(context, "Error al eliminar la imagen", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment editarPerfil.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            editarPerfil().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance() = editarPerfil()
     }
 }

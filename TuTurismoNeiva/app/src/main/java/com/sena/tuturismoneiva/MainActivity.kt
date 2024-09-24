@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     // Función para cambiar de idioma y aplicar la configuración
     private fun aplicarIdiomaGuardado() {
         val sharedPreferences: SharedPreferences = getSharedPreferences("configuracion_idioma", Context.MODE_PRIVATE)

@@ -1,6 +1,7 @@
 package com.sena.tuturismoneiva
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.database.sqlite.SQLiteOpenHelper
 import android.os.Bundle
 import android.view.View
@@ -26,6 +27,7 @@ class iniciarSesion : AppCompatActivity() {
     private lateinit var usernameEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +40,16 @@ class iniciarSesion : AppCompatActivity() {
             insets
         }
 
+        var btnVolverInicio: Button =findViewById<Button>(R.id.volverInicio)
+        btnVolverInicio.setOnClickListener{
+            finish()
+        }
+
         // Inicializar Volley RequestQueue
         requestQueue = Volley.newRequestQueue(this)
+
+        // Inicializar SharedPreferences
+        sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE)
 
         // Inicializar EditTexts y Button
         usernameEditText = findViewById(R.id.txtConfirmCorreo)
@@ -52,6 +62,16 @@ class iniciarSesion : AppCompatActivity() {
         }
     }
 
+    fun olvidarContraseña(view: View) {
+        val intent = Intent(application, olvidar_contra::class.java)
+        startActivity(intent)
+    }
+
+    fun registrarse(view: View) {
+        val intent = Intent(application, registrarse()::class.java)
+        startActivity(intent)
+    }
+
     private fun login() {
         val username = usernameEditText.text.toString()
         val password = passwordEditText.text.toString()
@@ -61,7 +81,7 @@ class iniciarSesion : AppCompatActivity() {
             return
         }
 
-        val url =  urlUsuario + "login/"
+        val url = urlUsuario + "login/"
 
         val jsonBody = JSONObject().apply {
             put("correoElectronico", username)
@@ -74,8 +94,13 @@ class iniciarSesion : AppCompatActivity() {
                 try {
                     val token = response.getString("token") // Ajusta según la respuesta de tu API
                     Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                    // Guardar el token o proceder con el inicio de sesión
-                    // Ejemplo: redirigir a otra actividad
+
+                    // Guardar el token en SharedPreferences
+                    val editor = sharedPreferences.edit()
+                    editor.putString("TOKEN", token)
+                    editor.apply()
+
+                    // Redirigir a otra actividad
                     val intent = Intent(this, menu::class.java)
                     startActivity(intent)
                 } catch (e: JSONException) {

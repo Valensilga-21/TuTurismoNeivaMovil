@@ -51,7 +51,7 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="65dp"
+            android:layout_marginLeft="57dp"
             android:layout_marginTop="135dp"
             android:text="@string/nombreUsuario"
             android:textColor="#FFFFFF"
@@ -61,9 +61,9 @@
 
         <EditText
             android:id="@+id/editTextText2"
-            android:layout_width="205dp"
+            android:layout_width="225dp"
             android:layout_height="35dp"
-            android:layout_marginLeft="62dp"
+            android:layout_marginLeft="55dp"
             android:layout_marginTop="165dp"
             android:background="@drawable/plain_text"
             android:ems="10"

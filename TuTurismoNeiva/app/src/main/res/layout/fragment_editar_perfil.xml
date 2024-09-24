@@ -43,7 +43,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button16"
+                    android:id="@+id/btnCamara"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="33dp"
                     android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                     app:iconTint="@color/white" />
 
                 <Button
-                    android:id="@+id/button17"
+                    android:id="@+id/btnEliminarFoto"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="34dp"
                     android:layout_height="wrap_content"
@@ -158,6 +158,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="125dp"
             android:layout_height="125dp"
+            android:background="@drawable/account_svgrepo_com"
+            android:backgroundTintMode="multiply"
             app:cardCornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -166,10 +168,11 @@
             app:layout_constraintVertical_bias="0.183">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/fotoPerfil"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:src="@drawable/_0491854" />
+                android:src="@drawable/account_svgrepo_com" />
+
         </androidx.cardview.widget.CardView>
 
         <Button

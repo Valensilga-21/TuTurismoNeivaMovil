@@ -9,7 +9,7 @@
     tools:context=".iniciarSesion">
 
     <Button
-        android:id="@+id/voverInicio"
+        android:id="@+id/volverInicio"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="49dp"
         android:layout_height="49dp"

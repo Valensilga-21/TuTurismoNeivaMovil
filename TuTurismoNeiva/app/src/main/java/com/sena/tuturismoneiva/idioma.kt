@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
@@ -22,6 +23,12 @@ class idioma : Fragment() {
     ): View? {
         // Infla el layout para este fragmento
         val view = inflater.inflate(R.layout.fragment_idioma, container, false)
+
+        // Configura el botón para volver
+        val btnBack = view.findViewById<Button>(R.id.volverIdioma)
+        btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
 
         // Inicializar SharedPreferences
         sharedPreferences = requireActivity().getSharedPreferences("configuracion_idioma", Context.MODE_PRIVATE)

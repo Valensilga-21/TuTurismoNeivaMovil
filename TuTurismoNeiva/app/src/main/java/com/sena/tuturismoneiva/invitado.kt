@@ -17,8 +17,8 @@ class invitado : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var btnVolverInicio: Button =findViewById<Button>(R.id.btnVolverInicio4)
-        btnVolverInicio.setOnClickListener{
+        var btnVolverInicio4: Button =findViewById<Button>(R.id.btnVolverInicio4)
+        btnVolverInicio4.setOnClickListener{
             finish()
         }
     }
