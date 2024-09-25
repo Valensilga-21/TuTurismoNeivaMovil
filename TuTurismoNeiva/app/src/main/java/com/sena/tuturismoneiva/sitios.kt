@@ -14,8 +14,8 @@ class sitios : Fragment() {
     private val handler = Handler()
     private val runnable = object : Runnable {
         override fun run() {
-            viewFlipper.showNext() // Cambia a la siguiente imagen
-            handler.postDelayed(this, 2000) // Cambia de imagen cada 3 segundos
+            viewFlipper.showNext()
+            handler.postDelayed(this, 2000)
         }
     }
 

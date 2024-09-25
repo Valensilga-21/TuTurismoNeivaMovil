@@ -24,29 +24,17 @@ class menu : AppCompatActivity() {
                 R.id.inicio -> replaceFragment(inicio())
                 R.id.mis_sitios -> replaceFragment(mis_sitios())
                 R.id.ajustes -> replaceFragment(ajustes())
-
                 else ->{
-
-
-
                 }
-
             }
-
             true
-
         }
-
-
     }
-
     private fun replaceFragment(fragment : Fragment){
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
-
-
     }
 }

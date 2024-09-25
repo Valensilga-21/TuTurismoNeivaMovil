@@ -38,11 +38,12 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="42dp"
             android:text="@string/iniciaSesión"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="35sp"

@@ -2,7 +2,6 @@ package com.sena.tuturismoneiva
 
 import android.content.Intent
 import android.content.SharedPreferences
-import android.database.sqlite.SQLiteOpenHelper
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -40,7 +39,7 @@ class iniciarSesion : AppCompatActivity() {
             insets
         }
 
-        var btnVolverInicio: Button =findViewById<Button>(R.id.volverInicio)
+        val btnVolverInicio: Button =findViewById<Button>(R.id.volverInicio)
         btnVolverInicio.setOnClickListener{
             finish()
         }
@@ -48,7 +47,6 @@ class iniciarSesion : AppCompatActivity() {
         // Inicializar Volley RequestQueue
         requestQueue = Volley.newRequestQueue(this)
 
-        // Inicializar SharedPreferences
         sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE)
 
         // Inicializar EditTexts y Button
@@ -92,15 +90,13 @@ class iniciarSesion : AppCompatActivity() {
             Request.Method.POST, url, jsonBody,
             Response.Listener { response ->
                 try {
-                    val token = response.getString("token") // Ajusta según la respuesta de tu API
+                    val token = response.getString("token")
                     Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
 
-                    // Guardar el token en SharedPreferences
                     val editor = sharedPreferences.edit()
                     editor.putString("TOKEN", token)
                     editor.apply()
 
-                    // Redirigir a otra actividad
                     val intent = Intent(this, menu::class.java)
                     startActivity(intent)
                 } catch (e: JSONException) {
@@ -109,7 +105,6 @@ class iniciarSesion : AppCompatActivity() {
                 }
             },
             Response.ErrorListener { error ->
-                // Manejar el error
                 error.printStackTrace()
                 Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show()
             }

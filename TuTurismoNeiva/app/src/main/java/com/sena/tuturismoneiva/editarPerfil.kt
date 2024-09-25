@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 
 class editarPerfil : Fragment() {
 
@@ -48,7 +49,26 @@ class editarPerfil : Fragment() {
         // Cargar la imagen guardada al iniciar el fragmento
         loadImageFromInternalStorage()
 
+        val btnCambiarContra = view.findViewById<Button>(R.id.btnCambiarContra)
+        btnCambiarContra.setOnClickListener {
+            cambiarAFragmentoCambiarContra()
+        }
+
         return view
+    }
+
+    private fun cambiarAFragmentoCambiarContra() {
+        val fragmentCambiarContra = cambiarContra()
+
+        val fragmentManager = parentFragmentManager
+
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+        transaction.replace(R.id.fragment_container, fragmentCambiarContra)
+
+        transaction.addToBackStack(null)
+
+        transaction.commit()
     }
 
     private fun selectImage() {
@@ -57,6 +77,7 @@ class editarPerfil : Fragment() {
         startActivityForResult(intent, PICK_IMAGE)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

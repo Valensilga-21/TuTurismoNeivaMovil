@@ -126,7 +126,7 @@
                 android:textColorLink="#FFFFFF" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/btnCambiarContra"
                 style="@style/Widget.Material3.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"

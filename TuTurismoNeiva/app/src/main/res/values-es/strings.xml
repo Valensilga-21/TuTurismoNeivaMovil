@@ -44,5 +44,9 @@
     <string name="guardar">Guardar</string>
     <string name="inicio">Inicio</string>
     <string name="ajustes">Configuración</string>
-
+    <string name="tituloCambiarContra">Cambiar contraseña</string>
+    <string name="mensajeCambiarContra">Asegúrate de elegir una contraseña robusta para proteger tu cuenta de accesos no autorizados.</string>
+    <string name="contraNueva">Contraseña nueva</string>
+    <string name="contraNuevaConfirm">Cofirmacion contraseña nueva</string>
+    <string name="masDetalles">Más detalles</string>
 </resources>

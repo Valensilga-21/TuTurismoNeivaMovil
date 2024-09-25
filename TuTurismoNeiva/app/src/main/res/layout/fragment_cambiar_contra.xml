@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/_0240806133254103"
     tools:context=".cambiarContra">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,6 +12,7 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
             android:layout_width="330dp"
             android:layout_height="410dp"
             android:background="@color/cards"
@@ -21,14 +23,108 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textView27"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="42dp"
+                android:text="@string/tituloCambiarContra"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="243dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="82dp"
+                android:justificationMode="inter_word"
+                android:text="@string/mensajeCambiarContra"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="163dp"
+                android:text="@string/cambiarcontraseña"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="245dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="189dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="139dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="330dp"
+                android:backgroundTint="@color/naranja"
+                android:text="@string/continuar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/white"
+                android:textColorLink="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="239dp"
+                android:text="@string/contraNuevaConfirm"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword2"
+                android:layout_width="245dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="265dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:inputType="textPassword" />
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnVolverPerfil"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/arrow_left_circle_svgrepo_com"
+            app:iconSize="35dp"
+            app:iconTint="@color/naranja"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.002"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
