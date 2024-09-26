@@ -13,33 +13,22 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
-            android:layout_width="319dp"
-            android:layout_height="400dp"
+            android:layout_width="316dp"
+            android:layout_height="375dp"
             android:backgroundTint="@color/cards"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.561">
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="84dp"
-                android:layout_marginTop="78dp"
-                android:text="Isabela Córdoba"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textSize="22dp"
-                android:textStyle="bold" />
+            app:layout_constraintVertical_bias="0.573">
 
             <LinearLayout
                 android:layout_width="69dp"
                 android:layout_height="29dp"
-                android:layout_marginLeft="135dp"
-                android:layout_marginTop="112dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="82dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -70,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="124dp"
                 android:src="@drawable/line_2" />
 
             <TextView
@@ -78,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="170dp"
+                android:layout_marginTop="150dp"
                 android:text="@string/nombre"
                 android:textColor="#FFFFFF"
                 android:textColorLink="#FFFFFF"
@@ -86,11 +75,11 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/txtNombreCompleto"
                 android:layout_width="237dp"
                 android:layout_height="33dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="195dp"
+                android:layout_marginTop="175dp"
                 android:background="@drawable/plain_text"
                 android:ems="10"
                 android:inputType="text"
@@ -104,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="237dp"
+                android:layout_marginTop="217dp"
                 android:text="@string/correo"
                 android:textColor="#FFFFFF"
                 android:textColorLink="#FFFFFF"
@@ -112,11 +101,11 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/txtCorreoElectronico"
                 android:layout_width="237dp"
                 android:layout_height="33dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="260dp"
+                android:layout_marginTop="243dp"
                 android:background="@drawable/plain_text"
                 android:ems="10"
                 android:inputType="text"
@@ -131,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="330dp"
+                android:layout_marginTop="308dp"
                 android:backgroundTint="@color/naranja"
                 android:text="@string/cambiarcontraseña"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -142,12 +131,12 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/btnGuardarCambios"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="56dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="231dp"
-                android:layout_marginTop="322dp"
+                android:layout_marginTop="302dp"
                 app:icon="@drawable/save_storage_folder_svgrepo_com"
                 app:iconSize="32dp"
                 app:iconTint="#FFFFFF" />
@@ -165,14 +154,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.183">
+            app:layout_constraintVertical_bias="0.24">
 
             <ImageView
                 android:id="@+id/fotoPerfil"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:src="@drawable/account_svgrepo_com" />
-
         </androidx.cardview.widget.CardView>
 
         <Button

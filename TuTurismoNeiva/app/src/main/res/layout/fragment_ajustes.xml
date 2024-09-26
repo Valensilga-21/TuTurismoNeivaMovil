@@ -48,7 +48,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/txtCorreoUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="110dp"

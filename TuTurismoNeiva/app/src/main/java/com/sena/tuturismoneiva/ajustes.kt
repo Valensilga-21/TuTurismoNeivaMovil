@@ -1,15 +1,27 @@
 package com.sena.tuturismoneiva
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
+import com.google.gson.Gson
+import com.sena.tuturismoneiva.config.config
+import com.sena.tuturismoneiva.models.usuario
 
 class ajustes : Fragment() {
 
+    private lateinit var txtNombrePerfil: TextView
+    private lateinit var txtCorreoPerfil: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -23,6 +35,9 @@ class ajustes : Fragment() {
     ): View? {
         // Infla el layout para este fragmento
         val view = inflater.inflate(R.layout.fragment_ajustes, container, false)
+
+        txtNombrePerfil = view.findViewById(R.id.txtNombreUsuario)
+        txtCorreoPerfil = view.findViewById(R.id.txtCorreoUsuario)
 
         // Encuentra el botón en el layout del fragmento
         val btnContacto = view.findViewById<Button>(R.id.btnContacto)
@@ -60,7 +75,42 @@ class ajustes : Fragment() {
             cambiarAFragmentoIdioma()
         }
 
+        mostrarPerfil()
         return view
+    }
+
+    fun mostrarPerfil(){
+        val sharedPreferences = requireActivity().getSharedPreferences("MiAppPreferences", Context.MODE_PRIVATE)
+        val token = sharedPreferences.getString("TOKEN", "")
+
+        val headers = HashMap<String, String>()
+        headers["Authorization"] = "Bearer $token"
+
+        val request = object : JsonObjectRequest(
+            Request.Method.GET,
+            config.urlProfile + "profile/",
+            null,
+            Response.Listener { response ->
+                val gson = Gson()
+                val usuario: usuario = gson.fromJson(response.toString(), usuario::class.java)
+                txtNombrePerfil.setText(usuario.nombreCompleto)
+                txtCorreoPerfil.setText(usuario.correoElectronico)
+            },
+            Response.ErrorListener { error ->
+                Toast.makeText(
+                    context,
+                    "Error al consultar",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        ) {
+            override fun getHeaders(): MutableMap<String, String> {
+                return headers
+            }
+        }
+
+        val queue = Volley.newRequestQueue(context)
+        queue.add(request)
     }
 
     private fun cambiarAFragmentoIdioma() {

@@ -12,20 +12,45 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
+import com.google.gson.Gson
+import com.sena.tuturismoneiva.config.config
+import com.sena.tuturismoneiva.models.usuario
+import org.json.JSONObject
 
 class editarPerfil : Fragment() {
 
     private val PICK_IMAGE = 100
     private lateinit var imageViewPerfil: ImageView
 
+    private lateinit var txtNombreCompleto:EditText
+    private lateinit var txtCorreoElectronico: EditText
+    var idUsuario: String = ""
+
+    private lateinit var btnGuardarCambios:Button
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_editar_perfil, container, false)
+
+        txtNombreCompleto = view.findViewById(R.id.txtNombreCompleto)
+        txtCorreoElectronico = view.findViewById(R.id.txtCorreoElectronico)
+
+        mostrarPerfil()
+
+        btnGuardarCambios = view.findViewById(R.id.btnGuardarCambios)
+        btnGuardarCambios.setOnClickListener {
+            editarPerfil()
+        }
 
         // Configura el botón para volver
         val btnBack = view.findViewById<Button>(R.id.volverPerfil)
@@ -57,6 +82,70 @@ class editarPerfil : Fragment() {
         return view
     }
 
+    fun mostrarPerfil(){
+        val sharedPreferences = requireActivity().getSharedPreferences("MiAppPreferences", Context.MODE_PRIVATE)
+        val token = sharedPreferences.getString("TOKEN", "")
+
+        val headers = HashMap<String, String>()
+        headers["Authorization"] = "Bearer $token"
+
+        val request = object : JsonObjectRequest(
+            Request.Method.GET,
+            config.urlProfile + "profile/",
+            null,
+            Response.Listener { response ->
+                val gson = Gson()
+                val usuario: usuario = gson.fromJson(response.toString(), usuario::class.java)
+                txtNombreCompleto.setText(usuario.nombreCompleto)
+                txtCorreoElectronico.setText(usuario.correoElectronico)
+                idUsuario = usuario.idUsuario
+
+            },
+            Response.ErrorListener { error ->
+                Toast.makeText(
+                    context,
+                    "Error al consultar",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        ) {
+            override fun getHeaders(): MutableMap<String, String> {
+                return headers
+            }
+        }
+
+        val queue = Volley.newRequestQueue(context)
+        queue.add(request)
+    }
+
+
+    fun editarPerfil() {
+        try {
+            var parametros = JSONObject()
+            parametros.put("nombreCompleto", txtNombreCompleto.text.toString())
+            parametros.put("correoElectronico", txtCorreoElectronico.text.toString())
+
+            var request = JsonObjectRequest(
+                Request.Method.PUT,
+                config.urlEditarProfile + idUsuario,
+                parametros,
+                { response ->
+                    Toast.makeText(context, "Se actualizó correctamente",
+                        Toast.LENGTH_LONG
+                    ).show()
+                },
+                { error ->
+                    Toast.makeText(context, "Se generó error al actualizar",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            )
+            var queue = Volley.newRequestQueue(context)
+            queue.add(request)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
     private fun cambiarAFragmentoCambiarContra() {
         val fragmentCambiarContra = cambiarContra()
 

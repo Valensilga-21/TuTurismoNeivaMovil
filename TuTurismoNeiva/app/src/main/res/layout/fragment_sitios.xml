@@ -14,8 +14,8 @@
 
         <androidx.gridlayout.widget.GridLayout
             android:id="@+id/gridLayout"
-            android:layout_width="345dp"
-            android:layout_height="380dp"
+            android:layout_width="365dp"
+            android:layout_height="379dp"
             app:columnCount="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +24,8 @@
             app:layout_constraintVertical_bias="0.096">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="162dp"
-                android:layout_height="244dp"
+                android:layout_width="172dp"
+                android:layout_height="258dp"
                 android:layout_marginRight="20dp"
                 android:backgroundTint="@color/white"
                 app:cardBackgroundColor="@color/white"
@@ -33,58 +33,51 @@
                 app:layout_column="0"
                 app:layout_row="0">
 
-                <RelativeLayout
-                    android:layout_width="135dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="149dp"
                     android:layout_height="120dp"
                     android:layout_marginLeft="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="236dp">
+                    android:layout_marginTop="9dp"
+                    app:cardCornerRadius="5dp">
 
-                    <ViewFlipper
-                        android:id="@+id/viewFlipper"
-                        android:layout_width="135dp"
-                        android:layout_height="120dp">
+                    <RelativeLayout
+                        android:layout_width="149dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="236dp">
 
-                        <ImageView
+                        <ViewFlipper
+                            android:id="@+id/viewFlipper"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="center"
-                            android:src="@drawable/images" />
+                            android:layout_height="match_parent">
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="center"
-                            android:src="@drawable/images__1_" />
+                            <ImageView
+                                android:layout_width="149dp"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:src="@drawable/images" />
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="center"
-                            android:src="@drawable/caption" />
-                    </ViewFlipper>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:src="@drawable/images__1_" />
 
-                </RelativeLayout>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:src="@drawable/caption" />
+                        </ViewFlipper>
 
-                <Button
-                    android:id="@+id/button32"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginLeft="129dp"
-                    android:layout_marginTop="213dp"
-                    app:icon="@drawable/heart_fill_svgrepo_com__1_"
-                    app:iconGravity="textTop"
-                    app:iconSize="13dp"
-                    app:iconTint="#FFFFFF"
-                    app:iconTintMode="multiply" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="140dp"
+                    android:layout_marginTop="135dp"
                     android:text="El Mohán"
                     android:textColor="@color/cards"
                     android:textColorLink="@color/cards"
@@ -95,7 +88,7 @@
                     android:layout_width="147dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="160dp"
+                    android:layout_marginTop="153dp"
                     android:text="Carrera 7 con Calle 2 Sur, Glorieta al Terminal"
                     android:textColor="@color/cards"
                     android:textColorLink="@color/cards"
@@ -104,90 +97,90 @@
                 <Button
                     android:id="@+id/button13"
                     style="@style/Widget.Material3.Button.ElevatedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="193dp"
+                    android:layout_width="151dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="192dp"
                     android:backgroundTint="#FFD260"
                     android:gravity="center|center_horizontal|center_vertical"
                     android:text="@string/masDetalles"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/cards"
                     android:textColorLink="@color/cards"
-                    android:textSize="6dp"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
                     app:icon="@drawable/question_svgrepo_com_6"
                     app:iconGravity="textEnd"
                     app:iconSize="12dp"
                     app:iconTint="@color/cards" />
 
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="220dp"
+                    android:backgroundTintMode="screen"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/heart_fill_svgrepo_com__1_" />
+
                 <LinearLayout
-                    android:layout_width="56dp"
+                    android:layout_width="82dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="215dp"
+                    android:layout_marginTop="232dp"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button27"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="11dp"
-                        android:layout_height="20dp"
-                        app:icon="@drawable/star_svgrepo_com"
-                        app:iconGravity="textTop"
-                        app:iconSize="10dp"
-                        app:iconTint="@color/naranja" />
+                    <ImageButton
+                        android:id="@+id/star1"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/star_svgrepo_com__1_" />
 
-                    <Button
-                        android:id="@+id/button28"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="11dp"
-                        android:layout_height="20dp"
-                        app:icon="@drawable/star_svgrepo_com"
-                        app:iconGravity="textTop"
-                        app:iconSize="10dp"
-                        app:iconTint="@color/naranja" />
+                    <ImageButton
+                        android:id="@+id/star2"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/star_svgrepo_com__1_" />
 
-                    <Button
-                        android:id="@+id/button29"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="11dp"
-                        android:layout_height="20dp"
-                        app:icon="@drawable/star_svgrepo_com"
-                        app:iconGravity="textTop"
-                        app:iconSize="10dp"
-                        app:iconTint="@color/naranja" />
+                    <ImageButton
+                        android:id="@+id/star3"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/star_svgrepo_com__1_" />
 
-                    <Button
-                        android:id="@+id/button30"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="11dp"
-                        android:layout_height="20dp"
-                        app:icon="@drawable/star_svgrepo_com"
-                        app:iconGravity="textTop"
-                        app:iconSize="10dp"
-                        app:iconTint="@color/naranja" />
+                    <ImageButton
+                        android:id="@+id/star4"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/star_svgrepo_com__1_" />
 
-                    <Button
-                        android:id="@+id/button31"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="11dp"
-                        android:layout_height="20dp"
-                        app:icon="@drawable/star_svgrepo_com"
-                        app:iconGravity="textTop"
-                        app:iconSize="10dp"
-                        app:iconTint="@color/naranja" />
-
-                    <Button
-                        android:id="@+id/button12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FFD260" />
+                    <ImageButton
+                        android:id="@+id/star5"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/star_svgrepo_com__1_" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="162dp"
+                android:layout_width="172dp"
                 android:layout_height="224dp"
                 android:backgroundTint="@color/white"
                 app:cardBackgroundColor="@color/white"
