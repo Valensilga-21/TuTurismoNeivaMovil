@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_containers"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -34,36 +35,36 @@
                 app:layout_row="0">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="149dp"
+                    android:layout_width="152dp"
                     android:layout_height="120dp"
-                    android:layout_marginLeft="14dp"
+                    android:layout_marginLeft="11dp"
                     android:layout_marginTop="9dp"
                     app:cardCornerRadius="5dp">
 
                     <RelativeLayout
-                        android:layout_width="149dp"
+                        android:layout_width="152dp"
                         android:layout_height="120dp"
                         android:layout_marginBottom="236dp">
 
                         <ViewFlipper
                             android:id="@+id/viewFlipper"
-                            android:layout_width="match_parent"
+                            android:layout_width="152dp"
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:layout_width="149dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="center"
                                 android:src="@drawable/images" />
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="center"
                                 android:src="@drawable/images__1_" />
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="center"
                                 android:src="@drawable/caption" />
@@ -72,33 +73,11 @@
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="135dp"
-                    android:text="El Mohán"
-                    android:textColor="@color/cards"
-                    android:textColorLink="@color/cards"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="147dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="153dp"
-                    android:text="Carrera 7 con Calle 2 Sur, Glorieta al Terminal"
-                    android:textColor="@color/cards"
-                    android:textColorLink="@color/cards"
-                    android:textSize="12sp" />
-
                 <Button
-                    android:id="@+id/button13"
+                    android:id="@+id/masDetalles"
                     style="@style/Widget.Material3.Button.ElevatedButton"
                     android:layout_width="151dp"
-                    android:layout_height="32dp"
+                    android:layout_height="33dp"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="192dp"
                     android:backgroundTint="#FFD260"
@@ -115,7 +94,7 @@
                     app:iconTint="@color/cards" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/heart"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginLeft="130dp"
@@ -123,6 +102,32 @@
                     android:backgroundTintMode="screen"
                     android:scaleType="centerInside"
                     android:src="@drawable/heart_fill_svgrepo_com__1_" />
+
+                <LinearLayout
+                    android:layout_width="152dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="135dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="152dp"
+                        android:layout_height="wrap_content"
+                        android:text="El Mohán"
+                        android:textColor="@color/cards"
+                        android:textColorLink="@color/cards"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="152dp"
+                        android:layout_height="wrap_content"
+                        android:text="Carrera 7 con Calle 2 Sur, Glorieta al Terminal"
+                        android:textColor="@color/cards"
+                        android:textColorLink="@color/cards"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="82dp"

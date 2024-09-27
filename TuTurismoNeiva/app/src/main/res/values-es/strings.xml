@@ -49,4 +49,5 @@
     <string name="contraNueva">Contraseña nueva</string>
     <string name="contraNuevaConfirm">Cofirmacion contraseña nueva</string>
     <string name="masDetalles">Más detalles</string>
+    <string name="descripcion">Descripción</string>
 </resources>

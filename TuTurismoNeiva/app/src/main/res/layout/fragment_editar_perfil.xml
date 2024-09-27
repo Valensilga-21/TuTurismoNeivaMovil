@@ -160,7 +160,8 @@
                 android:id="@+id/fotoPerfil"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:src="@drawable/account_svgrepo_com" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/_0491854" />
         </androidx.cardview.widget.CardView>
 
         <Button

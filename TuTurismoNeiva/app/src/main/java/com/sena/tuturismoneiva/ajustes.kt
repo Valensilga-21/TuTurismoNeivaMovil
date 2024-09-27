@@ -25,7 +25,6 @@ class ajustes : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            // Obtén los parámetros si es necesario
         }
     }
 
@@ -39,7 +38,6 @@ class ajustes : Fragment() {
         txtNombrePerfil = view.findViewById(R.id.txtNombreUsuario)
         txtCorreoPerfil = view.findViewById(R.id.txtCorreoUsuario)
 
-        // Encuentra el botón en el layout del fragmento
         val btnContacto = view.findViewById<Button>(R.id.btnContacto)
         btnContacto.setOnClickListener {
             cambiarAFragmentoContacto()
@@ -79,8 +77,9 @@ class ajustes : Fragment() {
         return view
     }
 
-    fun mostrarPerfil(){
-        val sharedPreferences = requireActivity().getSharedPreferences("MiAppPreferences", Context.MODE_PRIVATE)
+    fun mostrarPerfil() {
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("MiAppPreferences", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("TOKEN", "")
 
         val headers = HashMap<String, String>()
@@ -162,22 +161,16 @@ class ajustes : Fragment() {
     }
 
     private fun cambiarAFragmentoPerfil() {
-        // Crea una nueva instancia del fragmento de contacto
         val fragmentPerfil = editarPerfil()
 
-        // Obtén el FragmentManager
         val fragmentManager = parentFragmentManager
 
-        // Inicia una transacción de fragmentos
         val transaction: FragmentTransaction = fragmentManager.beginTransaction()
 
-        // Reemplaza el fragmento actual con el nuevo fragmento
         transaction.replace(R.id.fragment_container, fragmentPerfil)
 
-        // Agrega la transacción a la pila de retroceso (opcional)
         transaction.addToBackStack(null)
 
-        // Confirma la transacción
         transaction.commit()
     }
 

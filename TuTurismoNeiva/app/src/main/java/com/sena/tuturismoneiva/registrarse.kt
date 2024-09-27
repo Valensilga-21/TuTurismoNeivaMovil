@@ -1,5 +1,6 @@
 package com.sena.tuturismoneiva
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -114,6 +115,9 @@ class registrarse : AppCompatActivity() {
                         this, "Se guardó correctamente",
                         Toast.LENGTH_LONG
                     ).show()
+
+                    val intent = Intent(this, menu::class.java)
+                    startActivity(intent)
                 },
                 { error ->
                     Toast.makeText(
