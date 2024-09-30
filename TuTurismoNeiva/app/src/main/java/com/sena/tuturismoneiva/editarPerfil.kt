@@ -118,7 +118,7 @@ class editarPerfil : Fragment() {
         queue.add(request)
     }
 
-
+    /*
     fun editarPerfil() {
         try {
             var parametros = JSONObject()
@@ -145,7 +145,7 @@ class editarPerfil : Fragment() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-    }
+    }*/
     private fun cambiarAFragmentoCambiarContra() {
         val fragmentCambiarContra = cambiarContra()
 

@@ -10,6 +10,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.sena.tuturismoneiva.config.config
+import org.json.JSONException
 import org.json.JSONObject
 
 
@@ -108,22 +109,26 @@ class registrarse : AppCompatActivity() {
 
             val request = JsonObjectRequest(
                 Request.Method.POST,
-                config.urlUsuario+"registro/",
+                config.urlUsuario + "registro/",
                 parametros,
                 { response ->
-                    Toast.makeText(
-                        this, "Se guardó correctamente",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    try {
+                        val token = response.getString("token") // Suponiendo que el token se devuelve aquí
+                        val sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE)
+                        val editor = sharedPreferences.edit()
+                        editor.putString("TOKEN", token)
+                        editor.apply()
 
-                    val intent = Intent(this, menu::class.java)
-                    startActivity(intent)
+                        Toast.makeText(this, "Se guardó correctamente", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, menu::class.java)
+                        startActivity(intent)
+                    } catch (e: JSONException) {
+                        e.printStackTrace()
+                        Toast.makeText(this, "Error al obtener el token", Toast.LENGTH_LONG).show()
+                    }
                 },
                 { error ->
-                    Toast.makeText(
-                        this, "Se generó error",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    Toast.makeText(this, "Se generó error", Toast.LENGTH_LONG).show()
                 }
             )
 
