@@ -16,7 +16,6 @@ import org.json.JSONObject
 
 class registrarse : AppCompatActivity() {
     private lateinit var txtNombre: EditText
-    //private lateinit var txtTelefono: EditText
     private lateinit var txtCorreo: EditText
     private lateinit var txtContra: EditText
     private lateinit var txtConfirmContra: EditText
@@ -113,7 +112,7 @@ class registrarse : AppCompatActivity() {
                 parametros,
                 { response ->
                     try {
-                        val token = response.getString("token") // Suponiendo que el token se devuelve aquí
+                        val token = response.getString("token")
                         val sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE)
                         val editor = sharedPreferences.edit()
                         editor.putString("TOKEN", token)

@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        // Verificar si el usuario ya ha iniciado sesión
+        verificarSesion()
+
         setContentView(R.layout.activity_main)
 
         // Manejo de padding para ajustar a los insets del sistema
@@ -30,6 +34,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Función para verificar si el usuario ha iniciado sesión
+    private fun verificarSesion() {
+        val sharedPreferences = getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("is_logged_in", false)
+
+        if (isLoggedIn) {
+            // Redirigir al menú principal si el usuario ya está autenticado
+            val intent = Intent(this, menu::class.java)
+            startActivity(intent)
+            finish()  // Cierra la actividad actual para evitar que el usuario regrese al login
+        }
+    }
 
     // Función para cambiar de idioma y aplicar la configuración
     private fun aplicarIdiomaGuardado() {

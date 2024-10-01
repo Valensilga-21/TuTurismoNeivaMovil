@@ -1,5 +1,6 @@
 package com.sena.tuturismoneiva
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -58,6 +59,13 @@ class iniciarSesion : AppCompatActivity() {
         loginButton.setOnClickListener {
             login()
         }
+    }
+
+    fun guardarSesion() {
+        val sharedPreferences = getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("is_logged_in", true)
+        editor.apply()
     }
 
     fun olvidarContraseña(view: View) {

@@ -1,11 +1,14 @@
 package com.sena.tuturismoneiva
 
 import android.content.Context
+import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -22,6 +25,8 @@ class ajustes : Fragment() {
 
     private lateinit var txtNombrePerfil: TextView
     private lateinit var txtCorreoPerfil: TextView
+    private lateinit var imageViewPerfil: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,6 +39,10 @@ class ajustes : Fragment() {
     ): View? {
         // Infla el layout para este fragmento
         val view = inflater.inflate(R.layout.fragment_ajustes, container, false)
+
+        imageViewPerfil = view.findViewById(R.id.fotoPerfilAjustes)
+
+        loadImageFromInternalStorage()
 
         txtNombrePerfil = view.findViewById(R.id.txtNombreUsuario)
         txtCorreoPerfil = view.findViewById(R.id.txtCorreoUsuario)
@@ -73,8 +82,37 @@ class ajustes : Fragment() {
             cambiarAFragmentoIdioma()
         }
 
+        val btnLogout = view.findViewById<Button>(R.id.btnCerrrarSesion)
+        btnLogout.setOnClickListener {
+            cerrarSesion()
+        }
+
         mostrarPerfil()
         return view
+    }
+
+    fun cerrarSesion() {
+        val sharedPreferences = requireActivity().getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
+
+        val intent = Intent(requireActivity(), MainActivity::class.java)
+        startActivity(intent)
+        requireActivity().finish()
+    }
+
+    private fun loadImageFromInternalStorage() {
+        try {
+            val filename = "profile_image.png"
+            val fileInputStream = requireActivity().openFileInput(filename)
+            val bitmap = BitmapFactory.decodeStream(fileInputStream)
+            imageViewPerfil.setImageBitmap(bitmap)
+            fileInputStream.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(context, "No se encontró la imagen guardada", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun mostrarPerfil() {
@@ -92,8 +130,8 @@ class ajustes : Fragment() {
             Response.Listener { response ->
                 val gson = Gson()
                 val usuario: usuario = gson.fromJson(response.toString(), usuario::class.java)
-                txtNombrePerfil.setText(usuario.nombreCompleto)
-                txtCorreoPerfil.setText(usuario.correoElectronico)
+                txtNombrePerfil.text = usuario.nombreCompleto
+                txtCorreoPerfil.text = usuario.correoElectronico
             },
             Response.ErrorListener { error ->
                 Toast.makeText(
@@ -141,22 +179,16 @@ class ajustes : Fragment() {
     }
 
     private fun cambiarAFragmentoNosotros() {
-        // Crea una nueva instancia del fragmento de contacto
         val fragmentNosotros = nosotros()
 
-        // Obtén el FragmentManager
         val fragmentManager = parentFragmentManager
 
-        // Inicia una transacción de fragmentos
         val transaction: FragmentTransaction = fragmentManager.beginTransaction()
 
-        // Reemplaza el fragmento actual con el nuevo fragmento
         transaction.replace(R.id.fragment_container, fragmentNosotros)
 
-        // Agrega la transacción a la pila de retroceso (opcional)
         transaction.addToBackStack(null)
 
-        // Confirma la transacción
         transaction.commit()
     }
 
@@ -175,16 +207,7 @@ class ajustes : Fragment() {
     }
 
     companion object {
-        private const val ARG_PARAM1 = "param1"
-        private const val ARG_PARAM2 = "param2"
-
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ajustes().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance() = ajustes()
     }
 }
