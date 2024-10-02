@@ -1,5 +1,7 @@
 package com.sena.tuturismoneiva
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,11 +31,44 @@ class contacto : Fragment() {
         // Infla el layout para este fragmento
         val view = inflater.inflate(R.layout.fragment_contacto, container, false)
 
-        // Configura el botón para volver
         val btnBack = view.findViewById<Button>(R.id.volverContacto)
         btnBack.setOnClickListener {
-            // Maneja el botón de retroceso
             requireActivity().onBackPressed()
+        }
+
+        val imageButtonCall = view.findViewById<Button>(R.id.btnLlamar)
+        imageButtonCall.setOnClickListener {
+            val phoneNumber = "tel:3232323591"
+            val intent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse(phoneNumber)
+            }
+            startActivity(intent)
+        }
+
+        val buttonEmail = view.findViewById<Button>(R.id.btnCorreo)
+        buttonEmail.setOnClickListener {
+            val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto:tuturismoneiva@gmail.com")
+                putExtra(Intent.EXTRA_SUBJECT, "Asunto")
+                putExtra(Intent.EXTRA_TEXT, "¡Hola TuTurismo Neiva!")
+            }
+            startActivity(Intent.createChooser(emailIntent, "Enviar Email"))
+        }
+
+        val buttonInstagram = view.findViewById<Button>(R.id.btnIg)
+        buttonInstagram.setOnClickListener {
+            val instagramUrl = "https://www.instagram.com/tuturismoneiva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(instagramUrl))
+            startActivity(intent)
+        }
+
+        val buttonWhatsApp = view.findViewById<Button>(R.id.btnWhatsApp)
+        buttonWhatsApp.setOnClickListener {
+            val phoneNumber = "3232323591"
+            val message = "¡Hola TuTurismo Neiva!"
+            val url = "https://api.whatsapp.com/send?phone=$phoneNumber&text=${Uri.encode(message)}"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
         }
 
         return view

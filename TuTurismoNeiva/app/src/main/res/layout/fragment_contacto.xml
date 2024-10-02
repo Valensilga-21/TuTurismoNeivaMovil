@@ -67,7 +67,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button23"
+                    android:id="@+id/btnLlamar"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     app:iconTintMode="multiply" />
 
                 <Button
-                    android:id="@+id/button25"
+                    android:id="@+id/btnCorreo"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                     app:iconTintMode="multiply" />
 
                 <Button
-                    android:id="@+id/button26"
+                    android:id="@+id/btnIg"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                     app:iconTintMode="multiply" />
 
                 <Button
-                    android:id="@+id/button24"
+                    android:id="@+id/btnWhatsApp"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"

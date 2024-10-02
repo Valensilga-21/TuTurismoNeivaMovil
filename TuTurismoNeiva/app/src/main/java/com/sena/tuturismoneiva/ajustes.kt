@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -26,6 +27,9 @@ class ajustes : Fragment() {
     private lateinit var txtNombrePerfil: TextView
     private lateinit var txtCorreoPerfil: TextView
     private lateinit var imageViewPerfil: ImageView
+
+    private lateinit var switchDarkMode: Switch
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +50,19 @@ class ajustes : Fragment() {
 
         txtNombrePerfil = view.findViewById(R.id.txtNombreUsuario)
         txtCorreoPerfil = view.findViewById(R.id.txtCorreoUsuario)
+
+        // Configura el Switch
+        switchDarkMode = view.findViewById(R.id.switchDarkMode)
+        val sharedPreferences = requireActivity().getSharedPreferences("MiAppPreferences", Context.MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
+        switchDarkMode.isChecked = isDarkMode
+
+        switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("dark_mode", isChecked)
+            editor.apply()
+            requireActivity().recreate()
+        }
 
         val btnContacto = view.findViewById<Button>(R.id.btnContacto)
         btnContacto.setOnClickListener {

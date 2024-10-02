@@ -3,9 +3,10 @@ package com.sena.tuturismoneiva
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,22 +16,40 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Aplicar el idioma guardado antes de cargar el layout
-        aplicarIdiomaGuardado()
+        val sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
+        setTheme(if (isDarkMode) R.style.Theme_App_Dark else R.style.Theme_App_Light)
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        // Verificar si el usuario ya ha iniciado sesión
-        verificarSesion()
-
         setContentView(R.layout.activity_main)
+
+        aplicarIdiomaGuardado()
+
+        verificarSesion()
 
         // Manejo de padding para ajustar a los insets del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+    }
+
+    class TuActividad : AppCompatActivity() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+
+            val button2: Button = findViewById(R.id.btn2)
+
+            button2.setOnClickListener {
+                val url = "https://www.sena.edu.co/es-co/Paginas/default.aspx"
+                val intent = Intent(Intent.ACTION_VIEW).apply {
+                    data = Uri.parse(url)
+                }
+                startActivity(intent)
+            }
         }
     }
 
