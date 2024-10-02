@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TuTurismoNeiva"
+        android:theme="@style/Base.Theme.TuTurismoNeiva"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity

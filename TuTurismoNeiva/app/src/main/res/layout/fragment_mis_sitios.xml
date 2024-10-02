@@ -30,7 +30,7 @@
                 android:backgroundTint="#EFEEEE"
                 android:text="@string/sitios"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/cards"
+                android:textColor="#FF26282E"
                 android:textColorLink="@color/cards"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:backgroundTint="#FFD260"
                 android:text="@string/monumentos"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/cards"
+                android:textColor="#FF26282E"
                 android:textColorLink="@color/cards"
                 android:textSize="16sp"
                 android:textStyle="bold" />

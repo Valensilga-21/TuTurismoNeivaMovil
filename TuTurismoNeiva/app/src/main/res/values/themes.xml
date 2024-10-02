@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme_App_Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-
+    <style name="Base.Theme.TuTurismoNeiva" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-    <style name="Theme.TuTurismoNeiva" parent="Theme_App_Light" />
 </resources>

@@ -28,8 +28,8 @@
             android:layout_marginTop="35dp"
             android:text="@string/ingresaDatosPer"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="26sp"
             android:textStyle="bold" />
 
@@ -45,8 +45,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -79,8 +79,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/correo"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -112,8 +112,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contraseña"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -144,8 +144,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/confirmarContraseña"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -181,8 +181,8 @@
                 android:backgroundTint="@color/naranja"
                 android:text="@string/registrase"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

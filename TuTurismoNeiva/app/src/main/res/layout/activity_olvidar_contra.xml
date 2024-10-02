@@ -29,8 +29,8 @@
             android:layout_marginTop="40dp"
             android:text="@string/olvidarContraPregunta"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="32dp"
             android:textStyle="bold" />
 
@@ -42,8 +42,8 @@
             android:layout_marginTop="130dp"
             android:text="@string/avisoOlvidarContra"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="14sp" />
 
         <TextView
@@ -53,8 +53,8 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="200dp"
             android:text="@string/ingresaTuCorreo"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="18dp"
             android:textStyle="bold" />
 
@@ -82,8 +82,8 @@
             android:backgroundTint="@color/naranja"
             android:text="@string/recuperarContra"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="14sp"
             android:textStyle="bold" />
 

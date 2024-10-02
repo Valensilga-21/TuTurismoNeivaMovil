@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="cards">#26282E</color>
-    <color name="plaintext">#8FFFFFFF</color>
+    <color name="white">#26282E</color>
+    <color name="cards">#FFFFFF</color>
+    <color name="plaintext">#7A26282E</color>
     <color name="naranja">#FFB23E</color>
-    <color name="purple_200">#FFFFFF</color>
+    <color name="purple_200">#26282E</color>
     <color name="purple_500">#F9B854</color>
     <color name="purple_700">#F9B854</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="buscar">#FFFFFF</color>
+    <color name="buscar">#26282E</color>
     <color name="icono">#FF018786</color>
 </resources>

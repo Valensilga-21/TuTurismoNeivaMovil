@@ -3,6 +3,7 @@
     import android.content.Intent
     import android.os.Bundle
     import android.view.View
+    import android.view.ViewGroup
     import android.widget.Button
     import android.widget.EditText
     import android.widget.TextView
@@ -27,7 +28,6 @@
         private lateinit var txtErrorCorreo: TextView
         private lateinit var txtErrorContra: TextView
         private lateinit var txtErrorConfirmContra: TextView
-
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -133,16 +133,34 @@
                             editor.putString("TOKEN", token)
                             editor.apply()
 
-                            Toast.makeText(this, "Se guardó correctamente", Toast.LENGTH_LONG).show()
-                            val intent = Intent(this, menu::class.java)
-                            startActivity(intent)
+                            val alertaView = layoutInflater.inflate(R.layout.alertaregistrarse, null)
+
+                            val rootView = findViewById<View>(android.R.id.content) as ViewGroup
+                            rootView.addView(alertaView)
+
+                            android.os.Handler().postDelayed({
+                                rootView.removeView(alertaView)
+
+                                val intent = Intent(this, menu::class.java)
+                                startActivity(intent)
+                                finish()
+
+                            }, 2000) // 2000 milisegundos = 2 segundos
                         } catch (e: JSONException) {
                             e.printStackTrace()
                             Toast.makeText(this, "Error al obtener el token", Toast.LENGTH_LONG).show()
                         }
                     },
                     { error ->
-                        Toast.makeText(this, "Se generó error", Toast.LENGTH_LONG).show()
+                        val alertaView = layoutInflater.inflate(R.layout.alertaerrorregistro, null)
+
+                        val rootView = findViewById<View>(android.R.id.content) as ViewGroup
+                        rootView.addView(alertaView)
+
+                        android.os.Handler().postDelayed({
+                            rootView.removeView(alertaView)
+
+                        }, 2000)
                     }
                 )
 

@@ -26,7 +26,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="330dp"
-        android:layout_height="420dp"
+        android:layout_height="425dp"
         android:backgroundTint="@color/cards"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,62 +44,10 @@
             android:layout_marginTop="42dp"
             android:text="@string/iniciaSesión"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="35sp"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="44dp"
-            android:layout_marginTop="115dp"
-            android:text="@string/correo"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="44dp"
-            android:layout_marginTop="180dp"
-            android:text="@string/contraseña"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/txtConfirmCorreo"
-            android:layout_width="244dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="44dp"
-            android:layout_marginTop="140dp"
-            android:background="@drawable/plain_text"
-            android:ems="10"
-            android:inputType="text"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/txtConfirmContraseña"
-            android:layout_width="244dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="44dp"
-            android:layout_marginTop="210dp"
-            android:background="@drawable/plain_text"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF" />
 
         <Button
             android:id="@+id/btnIniciarSesion"
@@ -107,28 +55,28 @@
             android:layout_width="125dp"
             android:layout_height="40dp"
             android:layout_marginLeft="110dp"
-            android:layout_marginTop="265dp"
+            android:layout_marginTop="270dp"
             android:backgroundTint="@color/naranja"
             android:onClick="ingresarInicio"
             android:text="@string/ingresar"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button9"
             style="@style/Widget.Material3.Button"
-            android:layout_width="wrap_content"
+            android:layout_width="220dp"
             android:layout_height="37dp"
             android:layout_marginLeft="65dp"
-            android:layout_marginTop="318dp"
+            android:layout_marginTop="321dp"
             android:backgroundTint="@color/cards"
             android:onClick="olvidarContraseña"
             android:text="@string/olvidarContra"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="14sp" />
 
         <Button
@@ -137,15 +85,78 @@
             android:layout_width="253dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="342dp"
+            android:layout_marginTop="350dp"
             android:backgroundTint="@color/cards"
             android:onClick="registrarse"
             android:text="@string/primervezregi"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="245dp"
+            android:layout_height="143dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="110dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/correo"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtConfirmCorreo"
+                android:layout_width="244dp"
+                android:layout_height="35dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/contraseña"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtConfirmContraseña"
+                android:layout_width="244dp"
+                android:layout_height="35dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/errorIniciarSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/usuaNoEncontrado"
+                android:textColor="#FF4B4B"
+                android:textColorLink="#FF0000"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 

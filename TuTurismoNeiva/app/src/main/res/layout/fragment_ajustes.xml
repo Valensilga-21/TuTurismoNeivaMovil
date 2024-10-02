@@ -42,8 +42,8 @@
                 android:layout_marginLeft="110dp"
                 android:layout_marginTop="30dp"
                 android:text="Isabela Córdoba"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -54,8 +54,8 @@
                 android:layout_marginLeft="110dp"
                 android:layout_marginTop="51dp"
                 android:text="dikathe06@gmail.com"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF" />
+                android:textColor="@color/white"
+                android:textColorLink="@color/white" />
 
             <Button
                 android:id="@+id/btnPerfil"
@@ -79,6 +79,7 @@
                     android:id="@+id/fotoPerfilAjustes"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/_0491854" />
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
@@ -111,8 +112,8 @@
                     android:gravity="center|center_horizontal|left|center_vertical"
                     android:text="@string/idioma"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/world_svgrepo_com_1"
@@ -148,14 +149,14 @@
                     android:gravity="center|left"
                     android:text="@string/modoOscuro"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/moon_svgrepo_com_1"
                     app:iconGravity="textStart"
                     app:iconSize="25dp"
-                    app:iconTint="#FFFFFF" />
+                    app:iconTint="@color/white" />
 
                 <Switch
                     android:id="@+id/switchDarkMode"
@@ -183,8 +184,8 @@
                     android:onClick="contacto"
                     android:text="@string/contacto"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/contact_book_svgrepo_com_2"
@@ -221,14 +222,14 @@
                     android:gravity="center|left"
                     android:text="@string/nosotros"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/users_svgrepo_com_1"
                     app:iconGravity="textStart"
                     app:iconSize="25dp"
-                    app:iconTint="#FFFFFF" />
+                    app:iconTint="@color/white" />
 
                 <Button
                     android:id="@+id/btnNosotros2"
@@ -257,8 +258,8 @@
                     android:gravity="center|start"
                     android:text="@string/ayuda"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/help_circle_svgrepo_com__1__2"
@@ -293,8 +294,8 @@
                     android:gravity="center|start"
                     android:text="@string/cerrarSesion"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:icon="@drawable/arrow_left_circle_svgrepo_com"

@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.android.volley.Request
@@ -51,7 +52,7 @@ class ajustes : Fragment() {
         txtNombrePerfil = view.findViewById(R.id.txtNombreUsuario)
         txtCorreoPerfil = view.findViewById(R.id.txtCorreoUsuario)
 
-        // Configura el Switch
+        // Configurar el Switch para el modo oscuro
         switchDarkMode = view.findViewById(R.id.switchDarkMode)
         val sharedPreferences = requireActivity().getSharedPreferences("MiAppPreferences", Context.MODE_PRIVATE)
         val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
@@ -61,8 +62,18 @@ class ajustes : Fragment() {
             val editor = sharedPreferences.edit()
             editor.putBoolean("dark_mode", isChecked)
             editor.apply()
+
+            // Recrear el fragmento para aplicar el nuevo tema
             requireActivity().recreate()
+
+            // Actualizar el modo de tema usando AppCompatDelegate
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
+
 
         val btnContacto = view.findViewById<Button>(R.id.btnContacto)
         btnContacto.setOnClickListener {

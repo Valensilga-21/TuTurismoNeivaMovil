@@ -5,8 +5,10 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +30,8 @@ class iniciarSesion : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var sharedPreferences: SharedPreferences
+
+    private lateinit var txtErrorCorreo: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +58,8 @@ class iniciarSesion : AppCompatActivity() {
         usernameEditText = findViewById(R.id.txtConfirmCorreo)
         passwordEditText = findViewById(R.id.txtConfirmContraseña)
         loginButton = findViewById(R.id.btnIniciarSesion)
+
+        txtErrorCorreo=findViewById(R.id.errorIniciarSesion)
 
         // Configurar el listener del botón de inicio de sesión
         loginButton.setOnClickListener {
@@ -99,22 +105,39 @@ class iniciarSesion : AppCompatActivity() {
             Response.Listener { response ->
                 try {
                     val token = response.getString("token")
-                    Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
 
+                    // Guardar el token en las preferencias compartidas
                     val editor = sharedPreferences.edit()
                     editor.putString("TOKEN", token)
                     editor.apply()
 
-                    val intent = Intent(this, menu::class.java)
-                    startActivity(intent)
+                    // Inflar el layout de la alerta personalizada
+                    val alertaView = layoutInflater.inflate(R.layout.alertainiciosesion, null)
+
+                    // Agregar la vista de alerta al contenedor principal
+                    val rootView = findViewById<View>(android.R.id.content) as ViewGroup
+                    rootView.addView(alertaView)
+
+                    // Mostrar la alerta durante 2 segundos
+                    android.os.Handler().postDelayed({
+                        // Eliminar la alerta después de 2 segundos
+                        rootView.removeView(alertaView)
+
+                        // Redirigir a la vista principal (menu)
+                        val intent = Intent(this, menu::class.java)
+                        startActivity(intent)
+                        finish() // Cerrar la actividad actual
+
+                    }, 3000) // 2000 milisegundos = 2 segundos
+
                 } catch (e: JSONException) {
                     e.printStackTrace()
-                    Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show()
+                    txtErrorCorreo.visibility = View.VISIBLE
                 }
             },
             Response.ErrorListener { error ->
                 error.printStackTrace()
-                Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show()
+                txtErrorCorreo.visibility = View.VISIBLE
             }
         ) {}
 

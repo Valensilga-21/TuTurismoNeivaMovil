@@ -22,7 +22,7 @@
     <string name="iniciaSesión">Inicia Sesión</string>
     <string name="registrase">Registrarse</string>
     <string name="invitado">Invitado</string>
-    <string name="masdenosotros">¿Quieres saber más acerca de nosotros?</string>
+    <string name="masdenosotros">¿Te interesa subir contenido de tu empresa con nosotros?</string>
     <string name="ingresaDatosPer">Ingresa tus datos personales</string>
     <string name="eligetuidioma">Elige tu idioma</string>
     <string name="español">Español</string>
@@ -50,4 +50,5 @@
     <string name="contraNuevaConfirm">Cofirmacion contraseña nueva</string>
     <string name="masDetalles">Más detalles</string>
     <string name="descripcion">Descripción</string>
+    <string name="usuaNoEncontrado">Usuario no encontrado</string>
 </resources>

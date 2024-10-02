@@ -37,8 +37,8 @@
                 android:layout_marginLeft="75dp"
                 android:layout_marginTop="29dp"
                 android:text="@string/eligetuidioma"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -56,8 +56,8 @@
                     android:layout_height="34dp"
                     android:checked="true"
                     android:text="@string/español"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -67,8 +67,8 @@
                     android:layout_height="36dp"
                     android:checked="false"
                     android:text="@string/ingles"
-                    android:textColor="#FFFFFF"
-                    android:textColorLink="#FFFFFF"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </RadioGroup>
