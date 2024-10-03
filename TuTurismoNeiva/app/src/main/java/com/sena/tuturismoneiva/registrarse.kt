@@ -62,15 +62,15 @@
                 val confirmContra = txtConfirmContra.text.toString()
                 var formularioValido=true
 
-                formularioValido = validarCampo(nombre, validacionNombre, "El nombre no es válido", txtErrorNombre) && formularioValido
-                formularioValido = validarCampo(correo, validacionCorreo, "El correo electrónico no es válido", txtErrorCorreo) && formularioValido
+                formularioValido = validarCampo(nombre, validacionNombre, getString(R.string.nombre_no_valido), txtErrorNombre) && formularioValido
+                formularioValido = validarCampo(correo, validacionCorreo, getString(R.string.correo_no_valido), txtErrorCorreo) && formularioValido
 
                 if (contra.length !in 8..25) {
-                    txtErrorContra.text = "La contraseña debe tener entre 8 y 25 caracteres."
+                    txtErrorContra.text = getString(R.string.contra_longitud)
                     txtErrorContra.visibility = View.VISIBLE
                     formularioValido = false
                 } else if (!contra.matches(Regex(validacionContra))) {
-                    txtErrorContra.text = "Contraseña no válida."
+                    txtErrorContra.text = getString(R.string.contra_no_valida)
                     txtErrorContra.visibility = View.VISIBLE
                     formularioValido = false
                 } else {
@@ -78,11 +78,11 @@
                 }
 
                 if (confirmContra != contra) {
-                    txtErrorConfirmContra.text = "Las contraseñas no coinciden."
+                    txtErrorConfirmContra.text = getString(R.string.contrasenas_no_coinciden)
                     txtErrorConfirmContra.visibility = View.VISIBLE
                     formularioValido = false
                 } else if (confirmContra.isEmpty()) {
-                    txtErrorConfirmContra.text = "Este es un campo obligatorio."
+                    txtErrorConfirmContra.text = getString(R.string.campo_obligatorio)
                     txtErrorConfirmContra.visibility = View.VISIBLE
                     formularioValido = false
                 } else {
@@ -97,7 +97,7 @@
         private fun validarCampo(campo: String, regex: String, mensajeError: String, errorTextView: TextView): Boolean {
             return when {
                 campo.length !in 3..59 -> {
-                    errorTextView.text = "El campo debe tener entre 3 y 59 caracteres."
+                    errorTextView.text = getString(R.string.longitud_invalida)
                     errorTextView.visibility = View.VISIBLE
                     false
                 }

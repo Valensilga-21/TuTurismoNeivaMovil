@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#26282E</color>
-    <color name="cards">#FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cards">#323232</color>
     <color name="plaintext">#7A26282E</color>
+    <color name="backgroud">#000000</color>
     <color name="naranja">#FFB23E</color>
     <color name="purple_200">#26282E</color>
     <color name="purple_500">#F9B854</color>
@@ -12,4 +13,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="buscar">#26282E</color>
     <color name="icono">#FF018786</color>
+    <color name="linkmain">#FFFFFF</color>
 </resources>

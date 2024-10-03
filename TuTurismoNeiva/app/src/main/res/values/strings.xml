@@ -51,4 +51,15 @@
     <string name="masDetalles">More details</string>
     <string name="descripcion">Description</string>
     <string name="usuaNoEncontrado">User not found</string>
+    <string name="correctoInicioSesion">You have successfully logged in</string>
+    <string name="correctoRegistro">Registration successful!</string>
+    <string name="errorRegistro">Registration failed. Please try again</string>
+    <string name="nombre_no_valido">The name is not valid</string>
+    <string name="correo_no_valido">The email is not valid</string>
+    <string name="contra_longitud">The password must be between 8 and 25 characters.</string>
+    <string name="contra_no_valida">Invalid password.</string>
+    <string name="contrasenas_no_coinciden">Passwords do not match.</string>
+    <string name="campo_obligatorio">This is a required field.</string>
+    <string name="longitud_invalida">The field must be between 3 and 59 characters.</string>
+
 </resources>

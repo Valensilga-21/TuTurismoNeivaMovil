@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_0240806133254103"
+    android:backgroundTint="@color/backgroud"
     tools:context=".contacto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#FFFFFF">
+        android:background="@color/backgroud"
+        android:backgroundTint="@color/backgroud">
 
         <androidx.cardview.widget.CardView
             android:layout_width="319dp"

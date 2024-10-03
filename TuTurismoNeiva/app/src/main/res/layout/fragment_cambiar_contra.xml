@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_0240806133254103"
+    android:backgroundTint="@color/backgroud"
     tools:context=".cambiarContra">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,9 +76,9 @@
             <Button
                 android:id="@+id/button7"
                 style="@style/Widget.Material3.Button"
-                android:layout_width="139dp"
+                android:layout_width="239dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="330dp"
                 android:backgroundTint="@color/naranja"
                 android:text="@string/continuar"

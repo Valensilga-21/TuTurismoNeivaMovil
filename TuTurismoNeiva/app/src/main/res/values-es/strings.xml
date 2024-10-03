@@ -51,4 +51,15 @@
     <string name="masDetalles">Más detalles</string>
     <string name="descripcion">Descripción</string>
     <string name="usuaNoEncontrado">Usuario no encontrado</string>
+    <string name="correctoInicioSesion">Has iniciado sesión correctamente</string>
+    <string name="correctoRegistro">¡Registro exitoso!</string>
+    <string name="errorRegistro">Error en el registro. Por favor, intente nuevamente.</string>
+
+    <string name="nombre_no_valido">El nombre no es válido</string>
+    <string name="correo_no_valido">El correo electrónico no es válido</string>
+    <string name="contra_longitud">La contraseña debe tener entre 8 y 25 caracteres.</string>
+    <string name="contra_no_valida">Contraseña no válida.</string>
+    <string name="contrasenas_no_coinciden">Las contraseñas no coinciden.</string>
+    <string name="campo_obligatorio">Este es un campo obligatorio.</string>
+    <string name="longitud_invalida">El campo debe tener entre 3 y 59 caracteres.</string>
 </resources>

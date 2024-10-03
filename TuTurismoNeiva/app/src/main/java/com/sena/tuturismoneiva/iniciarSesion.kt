@@ -59,8 +59,6 @@ class iniciarSesion : AppCompatActivity() {
         passwordEditText = findViewById(R.id.txtConfirmContraseña)
         loginButton = findViewById(R.id.btnIniciarSesion)
 
-        txtErrorCorreo=findViewById(R.id.errorIniciarSesion)
-
         // Configurar el listener del botón de inicio de sesión
         loginButton.setOnClickListener {
             login()
@@ -111,33 +109,45 @@ class iniciarSesion : AppCompatActivity() {
                     editor.putString("TOKEN", token)
                     editor.apply()
 
-                    // Inflar el layout de la alerta personalizada
                     val alertaView = layoutInflater.inflate(R.layout.alertainiciosesion, null)
 
-                    // Agregar la vista de alerta al contenedor principal
                     val rootView = findViewById<View>(android.R.id.content) as ViewGroup
                     rootView.addView(alertaView)
 
-                    // Mostrar la alerta durante 2 segundos
                     android.os.Handler().postDelayed({
-                        // Eliminar la alerta después de 2 segundos
                         rootView.removeView(alertaView)
 
-                        // Redirigir a la vista principal (menu)
                         val intent = Intent(this, menu::class.java)
                         startActivity(intent)
-                        finish() // Cerrar la actividad actual
+                        finish()
 
-                    }, 3000) // 2000 milisegundos = 2 segundos
+                    }, 3000)
 
                 } catch (e: JSONException) {
                     e.printStackTrace()
-                    txtErrorCorreo.visibility = View.VISIBLE
+                    val alertaView = layoutInflater.inflate(R.layout.iniciarsesioncreden, null)
+
+                    val rootView = findViewById<View>(android.R.id.content) as ViewGroup
+                    rootView.addView(alertaView)
+
+                    android.os.Handler().postDelayed({
+                        rootView.removeView(alertaView)
+
+                    }, 2000)
                 }
             },
             Response.ErrorListener { error ->
                 error.printStackTrace()
-                txtErrorCorreo.visibility = View.VISIBLE
+                val alertaView = layoutInflater.inflate(R.layout.iniciarsesioncreden
+                    , null)
+
+                val rootView = findViewById<View>(android.R.id.content) as ViewGroup
+                rootView.addView(alertaView)
+
+                android.os.Handler().postDelayed({
+                    rootView.removeView(alertaView)
+
+                }, 2000)
             }
         ) {}
 

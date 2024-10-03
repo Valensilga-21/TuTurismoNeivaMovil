@@ -5,8 +5,72 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_0240806133254103"
+    android:backgroundTint="@color/backgroud"
     tools:context=".registrarse">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        app:srcCompat="@drawable/ellipse_4" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        android:rotationX="360"
+        android:rotationY="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.912"
+        app:srcCompat="@drawable/ellipse_4" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899"
+        app:srcCompat="@drawable/ellipse_5" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899"
+        app:srcCompat="@drawable/ellipse_5" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.683"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:srcCompat="@drawable/ellipse_5" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="322dp"
@@ -35,9 +99,9 @@
 
         <LinearLayout
             android:layout_width="245dp"
-            android:layout_height="330dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="133dp"
+            android:layout_marginTop="125dp"
             android:orientation="vertical">
 
             <TextView
@@ -174,10 +238,10 @@
             <Button
                 android:id="@+id/btnRegistrar"
                 style="@style/Widget.Material3.Button"
-                android:layout_width="126dp"
+                android:layout_width="245dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/naranja"
                 android:text="@string/registrase"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"

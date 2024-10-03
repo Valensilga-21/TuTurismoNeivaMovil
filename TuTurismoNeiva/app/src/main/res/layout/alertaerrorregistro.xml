@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFFFF">
+    android:background="#CD575757">
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
         android:layout_height="300dp"
-        android:background="@color/white"
+        android:background="@color/cards"
         android:orientation="vertical"
         android:padding="16dp"
         app:cardCornerRadius="20dp"
@@ -26,21 +26,21 @@
             android:layout_width="258dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="178dp"
-            android:text="Error en el registro. Por favor, intente nuevamente."
+            android:layout_marginTop="200dp"
+            android:text="@string/errorRegistro"
             android:textAlignment="center"
-            android:textColor="@color/cards"
-            android:textColorLink="@color/cards"
+            android:textColor="@color/linkmain"
+            android:textColorLink="@color/linkmain"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="133dp"
-            android:layout_height="123dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="42dp"
-            app:srcCompat="@drawable/_69779" />
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/file" />
 
     </androidx.cardview.widget.CardView>
 

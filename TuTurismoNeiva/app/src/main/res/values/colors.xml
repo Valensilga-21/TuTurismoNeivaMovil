@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cards">#26282E</color>
     <color name="plaintext">#8FFFFFFF</color>
+    <color name="backgroud">#FFFFFF</color>
     <color name="naranja">#FFB23E</color>
     <color name="purple_200">#FFFFFF</color>
     <color name="purple_500">#F9B854</color>
@@ -12,4 +13,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="buscar">#FFFFFF</color>
     <color name="icono">#FF018786</color>
+    <color name="linkmain">#26282E</color>
 </resources>

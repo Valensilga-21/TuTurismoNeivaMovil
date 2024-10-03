@@ -64,7 +64,7 @@ class contacto : Fragment() {
 
         val buttonWhatsApp = view.findViewById<Button>(R.id.btnWhatsApp)
         buttonWhatsApp.setOnClickListener {
-            val phoneNumber = "3232323591"
+            val phoneNumber = "+57 3232323591"
             val message = "¡Hola TuTurismo Neiva!"
             val url = "https://api.whatsapp.com/send?phone=$phoneNumber&text=${Uri.encode(message)}"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "651781774938",
+    "project_id": "tuturismo-neiva",
+    "storage_bucket": "tuturismo-neiva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651781774938:android:913858021a9fea8540c263",
+        "android_client_info": {
+          "package_name": "com.sena.tuturismoneiva"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_cu3w1XVVhvxMuH7leEsDqL8Bw9YfGoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
