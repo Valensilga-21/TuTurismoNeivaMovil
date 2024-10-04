@@ -54,7 +54,6 @@
     <string name="correctoInicioSesion">Has iniciado sesión correctamente</string>
     <string name="correctoRegistro">¡Registro exitoso!</string>
     <string name="errorRegistro">Error en el registro. Por favor, intente nuevamente.</string>
-
     <string name="nombre_no_valido">El nombre no es válido</string>
     <string name="correo_no_valido">El correo electrónico no es válido</string>
     <string name="contra_longitud">La contraseña debe tener entre 8 y 25 caracteres.</string>

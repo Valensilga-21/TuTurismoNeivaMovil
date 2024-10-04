@@ -35,12 +35,12 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="163dp"
-            android:layout_height="161dp"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="45dp"
-            app:srcCompat="@drawable/file" />
+            android:id="@+id/imageView27"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="55dp"
+            app:srcCompat="@drawable/delete_remove_uncheck_svgrepo_com" />
 
     </androidx.cardview.widget.CardView>
 

@@ -51,9 +51,11 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
 
     implementation("com.github.bumptech.glide:glide:4.15.1")
+    implementation(libs.firebase.auth)
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
     implementation("androidx.cardview:cardview:1.0.0")
 
+    implementation ("com.airbnb.android:lottie:+")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

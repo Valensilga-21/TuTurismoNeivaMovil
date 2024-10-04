@@ -68,18 +68,6 @@
             app:iconTint="@color/white" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="288dp"
-        android:layout_height="299dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314"
-        app:srcCompat="@drawable/logo" />
-
     <Button
         android:id="@+id/btn2"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -165,5 +153,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.749"
         app:srcCompat="@drawable/ellipse_5" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="287dp"
+        android:layout_height="243dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323"
+        app:srcCompat="@drawable/tuturismo_logo_final_removebg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

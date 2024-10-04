@@ -64,7 +64,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/txtCambiarContra"
                 android:layout_width="245dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="43dp"
@@ -74,7 +74,7 @@
                 android:inputType="textPassword" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnCambiar"
                 style="@style/Widget.Material3.Button"
                 android:layout_width="239dp"
                 android:layout_height="45dp"
@@ -101,7 +101,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/txtConfirmCambiarContra"
                 android:layout_width="245dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="43dp"
