@@ -16,7 +16,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
-import cambiarContra
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -24,7 +23,6 @@ import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.sena.tuturismoneiva.config.config
 import com.sena.tuturismoneiva.models.usuario
-import org.json.JSONObject
 
 class editarPerfil : Fragment() {
 
@@ -75,12 +73,26 @@ class editarPerfil : Fragment() {
         // Cargar la imagen guardada al iniciar el fragmento
         loadImageFromInternalStorage()
 
-        val btnCambiarContra = view.findViewById<Button>(R.id.btnCambiarContra)
-        btnCambiarContra.setOnClickListener {
-            cambiarAFragmentoCambiarContra()
+        val btnConfirmCOrreo = view.findViewById<Button>(R.id.btnCambiarContra)
+        btnConfirmCOrreo.setOnClickListener {
+            cambiarAFragmentoConfirmCorreo()
         }
 
         return view
+    }
+
+    private fun cambiarAFragmentoConfirmCorreo() {
+        val fragmentConfirmCo = confirmCorreo()
+
+        val fragmentManager = parentFragmentManager
+
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+        transaction.replace(R.id.fragment_container, fragmentConfirmCo)
+
+        transaction.addToBackStack(null)
+
+        transaction.commit()
     }
 
     fun mostrarPerfil(){
@@ -147,19 +159,7 @@ class editarPerfil : Fragment() {
             e.printStackTrace()
         }
     }*/
-    private fun cambiarAFragmentoCambiarContra() {
-        val fragmentCambiarContra = cambiarContra()
 
-        val fragmentManager = parentFragmentManager
-
-        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
-
-        transaction.replace(R.id.fragment_container, fragmentCambiarContra)
-
-        transaction.addToBackStack(null)
-
-        transaction.commit()
-    }
 
     private fun selectImage() {
         val intent = Intent(Intent.ACTION_PICK)

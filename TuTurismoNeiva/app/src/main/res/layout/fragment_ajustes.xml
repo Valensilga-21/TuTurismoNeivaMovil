@@ -12,6 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976"
+            app:srcCompat="@drawable/ellipse_4" />
+
+        <ImageView
+            android:id="@+id/imageView35"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.063"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.903"
+            app:srcCompat="@drawable/ellipse_5" />
+
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
@@ -19,6 +43,7 @@
             android:text="©2024 · TuTurismo Neiva "
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.556"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.95" />
@@ -251,7 +276,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button20"
+                    android:id="@+id/btnAyuda"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="267dp"
                     android:layout_height="wrap_content"
@@ -268,7 +293,7 @@
                     app:iconTint="@color/naranja" />
 
                 <Button
-                    android:id="@+id/button21"
+                    android:id="@+id/btnAyuda2"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="43dp"
                     android:layout_height="38dp"
@@ -306,6 +331,18 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="89dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ellipse_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

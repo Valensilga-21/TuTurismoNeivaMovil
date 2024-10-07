@@ -73,7 +73,7 @@ class iniciarSesion : AppCompatActivity() {
     }
 
     fun olvidarContraseña(view: View) {
-        val intent = Intent(application, olvidar_contra::class.java)
+        val intent = Intent(application, olvidarContra::class.java)
         startActivity(intent)
     }
 

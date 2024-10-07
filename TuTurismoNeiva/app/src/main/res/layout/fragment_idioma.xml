@@ -12,8 +12,70 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView52"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="223dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.675"
+            app:srcCompat="@drawable/circle_svgrepo_com__1_" />
+
+        <ImageView
+            android:id="@+id/imageView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.962"
+            app:srcCompat="@drawable/ellipse_4" />
+
+        <ImageView
+            android:id="@+id/imageView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotationY="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.994"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067"
+            app:srcCompat="@drawable/ellipse_4" />
+
+        <ImageView
+            android:id="@+id/imageView55"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.146"
+            app:srcCompat="@drawable/ellipse_5" />
+
+        <ImageView
+            android:id="@+id/imageView56"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.881"
+            app:srcCompat="@drawable/ellipse_5" />
+
         <androidx.cardview.widget.CardView
-            android:layout_width="268dp"
+            android:layout_width="278dp"
             android:layout_height="232dp"
             android:backgroundTint="@color/cards"
             app:cardCornerRadius="20dp"
@@ -40,15 +102,15 @@
                 android:text="@string/eligetuidioma"
                 android:textColor="@color/white"
                 android:textColorLink="@color/white"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/radioGroupIdioma"
-                android:layout_width="137dp"
+                android:layout_width="181dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="42dp"
-                android:layout_marginTop="110dp"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="114dp"
                 android:theme="@style/RadioButtonNaranja">
 
                 <RadioButton
@@ -59,7 +121,7 @@
                     android:text="@string/español"
                     android:textColor="@color/white"
                     android:textColorLink="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -70,7 +132,7 @@
                     android:text="@string/ingles"
                     android:textColor="@color/white"
                     android:textColorLink="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </RadioGroup>
 
