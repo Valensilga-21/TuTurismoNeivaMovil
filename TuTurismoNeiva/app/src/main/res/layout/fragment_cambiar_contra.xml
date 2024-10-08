@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroud"
     android:backgroundTint="@color/backgroud"
     tools:context=".cambiarContra">
 
@@ -76,101 +77,110 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
             android:layout_width="330dp"
-            android:layout_height="410dp"
+            android:layout_height="405dp"
             android:background="@color/cards"
             android:backgroundTint="@color/cards"
             app:cardBackgroundColor="@color/cards"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538">
 
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="296dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="302dp"
+                android:layout_height="331dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="42dp"
-                android:text="@string/tituloCambiarContra"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textColorLink="@color/white"
-                android:textSize="30dp"
-                android:textStyle="bold" />
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="243dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="82dp"
-                android:justificationMode="inter_word"
-                android:text="@string/mensajeCambiarContra"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textColorLink="@color/white"
-                android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="296dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/tituloCambiarContra"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="163dp"
-                android:text="@string/cambiarcontraseña"
-                android:textColor="@color/white"
-                android:textColorLink="@color/white"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:justificationMode="inter_word"
+                    android:text="@string/mensajeCambiarContra"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/txtCambiarContra"
-                android:layout_width="245dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="43dp"
-                android:layout_marginTop="189dp"
-                android:background="@drawable/plain_text"
-                android:ems="10"
-                android:inputType="textPassword" />
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/contraActual"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnCambiar"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="239dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="330dp"
-                android:backgroundTint="@color/naranja"
-                android:text="@string/continuar"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/white"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/contraAct"
+                    android:layout_width="245dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/plain_text"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF" />
 
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="239dp"
-                android:text="@string/contraNuevaConfirm"
-                android:textColor="@color/white"
-                android:textColorLink="@color/white"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/contraNueva"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/txtConfirmCambiarContra"
-                android:layout_width="245dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="43dp"
-                android:layout_marginTop="265dp"
-                android:background="@drawable/plain_text"
-                android:ems="10"
-                android:inputType="textPassword" />
+                <EditText
+                    android:id="@+id/contraNueva"
+                    android:layout_width="245dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/plain_text"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/btnCambiar"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="239dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/naranja"
+                    android:text="@string/continuar"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <Button
@@ -187,6 +197,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.023" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

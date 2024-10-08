@@ -23,6 +23,7 @@ import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.sena.tuturismoneiva.config.config
 import com.sena.tuturismoneiva.models.usuario
+import confirmCorreo
 
 class editarPerfil : Fragment() {
 
@@ -82,7 +83,7 @@ class editarPerfil : Fragment() {
     }
 
     private fun cambiarAFragmentoConfirmCorreo() {
-        val fragmentConfirmCo = confirmCorreo()
+        val fragmentConfirmCo = confirmCorreo.newInstance(txtCorreoElectronico.text.toString())
 
         val fragmentManager = parentFragmentManager
 

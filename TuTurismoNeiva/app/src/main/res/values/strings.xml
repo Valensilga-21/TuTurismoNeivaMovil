@@ -46,8 +46,9 @@
     <string name="ajustes">Settings</string>
     <string name="tituloCambiarContra">Change Password</string>
     <string name="mensajeCambiarContra">Make sure to choose a strong password to protect your account from unauthorized access.</string>
-    <string name="contraNueva">New Password</string>
-    <string name="contraNuevaConfirm">Confirm New Password</string>
+    <string name="contraActual">Current password</string>
+    <string name="contraNueva">New password</string>
+    <string name="contraNuevaConfirm">Confirm new password</string>
     <string name="masDetalles">More details</string>
     <string name="descripcion">Description</string>
     <string name="usuaNoEncontrado">User not found</string>

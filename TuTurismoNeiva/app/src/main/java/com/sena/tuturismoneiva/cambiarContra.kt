@@ -26,7 +26,7 @@ class cambiarContra : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_cambiar_contra, container, false)
 
-        txtNuevaContra = view.findViewById(R.id.txtCambiarContra)
+        txtNuevaContra = view.findViewById(R.id.contraNueva)
         txtConfirmarNuevaContra = view.findViewById(R.id.txtConfirmCambiarContra)
         btnCambiar = view.findViewById(R.id.btnCambiar)
 

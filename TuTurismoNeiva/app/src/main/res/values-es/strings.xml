@@ -46,8 +46,9 @@
     <string name="ajustes">Configuración</string>
     <string name="tituloCambiarContra">Cambiar contraseña</string>
     <string name="mensajeCambiarContra">Asegúrate de elegir una contraseña robusta para proteger tu cuenta de accesos no autorizados.</string>
-    <string name="contraNueva">Contraseña nueva</string>
-    <string name="contraNuevaConfirm">Cofirmacion contraseña nueva</string>
+    <string name="contraActual">Contraseña actual</string>
+    <string name="contraNueva">Nueva contraseña</string>
+    <string name="contraNuevaConfirm">Confirmar nueva contraseña</string>
     <string name="masDetalles">Más detalles</string>
     <string name="descripcion">Descripción</string>
     <string name="usuaNoEncontrado">Usuario no encontrado</string>
