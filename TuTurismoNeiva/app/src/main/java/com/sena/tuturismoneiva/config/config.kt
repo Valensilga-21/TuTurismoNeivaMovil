@@ -6,8 +6,8 @@ class config {
         var urlBase = "http://10.192.66.60:8082/api/v1/"
         var urlUsuario = urlBase + "publico/Usuario/"
         var urlProfile= "http://10.192.66.60:8082/api/v1/usuario/"
-        var urlEditarProfile= "http://10.192.66.60:8082/api/v1/Usuario/"
+        var urlEditarProfile= "http://10.192.66.60:8082/api/v1/usuario/"
         var urlSitios = "http://10.192.66.60:8082/api/v1/SitioMonumento/"
-        var urlCambiarContra = urlBase + "usuario/cambiarContra/"
+        var urlCambiarContra = urlBase + "usuario/cambiarContrasena/"
     }
 }

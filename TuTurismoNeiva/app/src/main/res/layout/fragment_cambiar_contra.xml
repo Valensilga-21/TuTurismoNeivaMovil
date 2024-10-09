@@ -76,8 +76,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
-            android:layout_width="330dp"
-            android:layout_height="405dp"
+            android:layout_width="333dp"
+            android:layout_height="452dp"
             android:background="@color/cards"
             android:backgroundTint="@color/cards"
             app:cardBackgroundColor="@color/cards"
@@ -91,7 +91,7 @@
 
             <LinearLayout
                 android:layout_width="302dp"
-                android:layout_height="331dp"
+                android:layout_height="391dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="40dp"
                 android:orientation="vertical">
@@ -163,7 +163,33 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/plain_text"
                     android:ems="10"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/contraNuevaConfirm"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/contraConfirmar"
+                    android:layout_width="245dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/plain_text"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF" />
 
                 <Button
                     android:id="@+id/btnCambiar"

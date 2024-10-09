@@ -50,6 +50,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun cambiarIdioma() {
+        val sharedPreferences = getSharedPreferences("configuracion_idioma", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("idioma", "es") // Español por defecto
+        editor.apply()
+
+        val locale = Locale("es")
+        Locale.setDefault(locale)
+
+        val config = resources.configuration
+        config.setLocale(locale)
+
+        resources.updateConfiguration(config, resources.displayMetrics)
+
+        recreate()
+    }
+
     // Verificar si el usuario está autenticado
     private fun verificarSesion() {
         val sharedPreferences = getSharedPreferences("app_preferences", Context.MODE_PRIVATE)

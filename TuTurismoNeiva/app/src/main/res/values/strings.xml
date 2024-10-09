@@ -64,5 +64,6 @@
     <string name="longitud_invalida">The field must be between 3 and 59 characters.</string>
     <string name="confirmCorreoElectronico">Email Confirmation</string>
     <string name="confirm">Confirm</string>
+    <string name="alertataCambioExitoso">Your password has been successfully changed. Please log in with your new password.</string>
     <string name="textoCambioCorreoElectronico">Please enter your email address below to confirm your identity. This is necessary to proceed with changing your password.</string>
 </resources>

@@ -1,5 +1,4 @@
 package com.sena.tuturismoneiva.models
-
 data class usuario(
     var idUsuario: String,
     var nombreCompleto: String,
