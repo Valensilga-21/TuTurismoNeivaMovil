@@ -90,7 +90,8 @@
                 android:id="@+id/recyclerViewMonuments"
                 android:layout_width="match_parent"
                 android:layout_height="552dp"
-                android:scrollbars="vertical" />
+                android:scrollbars="vertical"
+                tools:listitem="@layout/fragment_sitios"/>
 
         </LinearLayout>
 

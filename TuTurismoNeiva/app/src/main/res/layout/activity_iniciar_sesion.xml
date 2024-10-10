@@ -76,7 +76,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView8"
         android:layout_width="330dp"
-        android:layout_height="455dp"
+        android:layout_height="425dp"
         android:backgroundTint="@color/cards"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,7 +101,7 @@
 
         <LinearLayout
             android:layout_width="250dp"
-            android:layout_height="334dp"
+            android:layout_height="295dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="110dp"
             android:orientation="vertical">
@@ -187,37 +187,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="98dp"
-                android:layout_height="51dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/imageButton4"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#00FF0000"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/google_color_svgrepo_com" />
-
-                <ImageButton
-                    android:id="@+id/imageButton5"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#00FF0000"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/facebook_svgrepo_com" />
-            </LinearLayout>
-
             <Button
                 android:id="@+id/button10"
                 style="@style/Widget.Material3.Button"
                 android:layout_width="253dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="25dp"
                 android:backgroundTint="@color/cards"
                 android:onClick="registrarse"
                 android:text="@string/primervezregi"

@@ -5,7 +5,7 @@ import java.sql.Time
 
 data class SitioMonumento(
     val idSitioMonumento: String,
-    val clasificacionSitioMonumento: Char,
+    val clasificacionSitioMonumento: String,
     val nombreSitioMonumento:String,
     val ubicacionSitioMonumento:String,
     val calificacionSitioMonumento:String,

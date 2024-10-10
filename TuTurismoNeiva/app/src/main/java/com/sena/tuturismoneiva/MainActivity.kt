@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE)
         val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
 
-        // Aplica el modo oscuro/claro en función de la preferencia guardada
         if (isDarkMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else {

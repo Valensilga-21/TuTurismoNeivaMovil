@@ -64,6 +64,9 @@
     <string name="longitud_invalida">El campo debe tener entre 3 y 59 caracteres.</string>
     <string name="confirmCorreoElectronico">Confirmación de correo electrónico</string>
     <string name="confirm">Confirmar</string>
+    <string name="llenatodosloscampos">Por favor, completa todos los campos</string>
+    <string name="actnopuedeserigualnueva">La contraseña actual no puede ser igual a la nueva</string>
+    <string name="nocinciden">La nueva contraseña y la confirmación no coinciden</string>
     <string name="errorCorreoRegistro">Error en el registro. El correo electrónico ya está registrado.</string>
     <string name="alertataCambioExitoso">Su contraseña ha sido cambiada con éxito. Por favor, inicie sesión con su nueva contraseña.</string>
     <string name="textoCambioCorreoElectronico">Por favor, ingresa tu dirección de correo electrónico a continuación para confirmar tu identidad. Esto es necesario para proceder con el cambio de tu contraseña.</string>

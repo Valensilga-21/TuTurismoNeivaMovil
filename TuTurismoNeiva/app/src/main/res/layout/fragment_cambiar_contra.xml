@@ -77,7 +77,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
             android:layout_width="333dp"
-            android:layout_height="452dp"
+            android:layout_height="487dp"
             android:background="@color/cards"
             android:backgroundTint="@color/cards"
             app:cardBackgroundColor="@color/cards"
@@ -91,7 +91,7 @@
 
             <LinearLayout
                 android:layout_width="302dp"
-                android:layout_height="391dp"
+                android:layout_height="434dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="40dp"
                 android:orientation="vertical">
@@ -144,11 +144,21 @@
                     android:textColorLink="#FFFFFF" />
 
                 <TextView
+                    android:id="@+id/errorActualContra"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/llenatodosloscampos"
+                    android:textColor="#FF4B4B"
+                    android:textColorLink="#FF0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+
+                <TextView
                     android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
                     android:text="@string/contraNueva"
                     android:textColor="@color/white"
                     android:textColorLink="@color/white"
@@ -160,7 +170,6 @@
                     android:layout_width="245dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
                     android:background="@drawable/plain_text"
                     android:ems="10"
                     android:inputType="textPassword"
@@ -168,11 +177,21 @@
                     android:textColorLink="#FFFFFF" />
 
                 <TextView
+                    android:id="@+id/errorNuevaContra"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/actnopuedeserigualnueva"
+                    android:textColor="#FF4B4B"
+                    android:textColorLink="#FF0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+
+                <TextView
                     android:id="@+id/textView30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
                     android:text="@string/contraNuevaConfirm"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
@@ -184,12 +203,22 @@
                     android:layout_width="245dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
                     android:background="@drawable/plain_text"
                     android:ems="10"
                     android:inputType="textPassword"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/errorConfirmNuevaContra"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/nocinciden"
+                    android:textColor="#FF4B4B"
+                    android:textColorLink="#FF0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnCambiar"
@@ -197,7 +226,7 @@
                     android:layout_width="239dp"
                     android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="8dp"
                     android:backgroundTint="@color/naranja"
                     android:text="@string/continuar"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
