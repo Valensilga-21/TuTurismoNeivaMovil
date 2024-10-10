@@ -325,7 +325,7 @@
                     android:textStyle="bold"
                     app:icon="@drawable/arrow_left_circle_svgrepo_com"
                     app:iconGravity="textStart"
-                    app:iconSize="25dp"
+                    app:iconSize="24dp"
                     app:iconTint="@color/white"
                     app:iconTintMode="src_in" />
 

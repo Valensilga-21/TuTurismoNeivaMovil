@@ -34,10 +34,9 @@ class MainActivity : AppCompatActivity() {
         aplicarIdiomaGuardado()
         verificarSesion()
 
-        // Agrega el listener para el TextView que abrirá la página web
         val textViewWeb: TextView = findViewById(R.id.btn2)
         textViewWeb.setOnClickListener {
-            val url = "http://10.192.66.60:5500/Front-end/html/RegistroEmpresa.html"
+            val url = "http://tuturismoneiva.com/Front-end/html/RegistroEmpresa.html"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
