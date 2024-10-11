@@ -48,11 +48,12 @@ class inicio : Fragment(), sitioMonumentoAdapter.OnMonumentClickListener {
         requestQueue = Volley.newRequestQueue(requireContext())
 
         // Cargar los datos desde la API
-        cargarDatosSitios()
+        //cargarDatosSitios()
 
         return view
     }
 
+    /*
     private fun cargarDatosSitios() {
         val url = config.urlSitios
 
@@ -86,9 +87,10 @@ class inicio : Fragment(), sitioMonumentoAdapter.OnMonumentClickListener {
         requestQueue.add(jsonArrayRequest)
     }
 
-
+*/
 
     override fun onMoreDetailsClick(monument: SitioMonumento) {
         // Aquí puedes manejar el evento de clic para mostrar más detalles del sitio
     }
 }
+
