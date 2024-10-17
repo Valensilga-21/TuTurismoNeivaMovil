@@ -20,10 +20,10 @@
             android:layout_marginStart="223dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.219"
+            app:layout_constraintHorizontal_bias="0.287"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.814"
+            app:layout_constraintVertical_bias="0.779"
             app:srcCompat="@drawable/circle_svgrepo_com__1_" />
 
         <ImageView
@@ -76,15 +76,15 @@
             app:srcCompat="@drawable/ellipse_5" />
 
         <androidx.cardview.widget.CardView
-            android:layout_width="319dp"
-            android:layout_height="422dp"
+            android:layout_width="317dp"
+            android:layout_height="353dp"
             app:cardBackgroundColor="@color/cards"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.498">
+            app:layout_constraintVertical_bias="0.521">
 
             <TextView
                 android:id="@+id/textView12"
@@ -176,17 +176,6 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="222dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="335dp"
-                android:text="@string/mensajeEmpresa"
-                android:textAlignment="center"
-                android:textColor="@color/naranja"
-                android:textColorLink="@color/naranja"
-                android:textSize="15sp" />
         </androidx.cardview.widget.CardView>
 
         <Button

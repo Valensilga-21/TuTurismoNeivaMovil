@@ -145,37 +145,22 @@
                                 startActivity(intent)
                                 finish()
 
-                            }, 2000) // 2000 milisegundos = 2 segundos
+                            }, 2000)
                         } catch (e: JSONException) {
                             e.printStackTrace()
                             Toast.makeText(this, "Error al obtener el token", Toast.LENGTH_LONG).show()
                         }
                     },
                     { error ->
-                        error.networkResponse?.let {
-                            if (it.statusCode == 409) {
-                                val alertaView = layoutInflater.inflate(R.layout.alertaerrorcorreo, null)
+                        val alertaView = layoutInflater.inflate(R.layout.alertaerrorregistro, null)
 
-                                val rootView = findViewById<View>(android.R.id.content) as ViewGroup
-                                rootView.addView(alertaView)
+                        val rootView = findViewById<View>(android.R.id.content) as ViewGroup
+                        rootView.addView(alertaView)
 
-                                android.os.Handler().postDelayed({
-                                    rootView.removeView(alertaView)
+                        android.os.Handler().postDelayed({
+                            rootView.removeView(alertaView)
 
-                                }, 2000)
-                            } else {
-                                // Otros errores
-                                val alertaView = layoutInflater.inflate(R.layout.alertaerrorregistro, null)
-
-                                val rootView = findViewById<View>(android.R.id.content) as ViewGroup
-                                rootView.addView(alertaView)
-
-                                android.os.Handler().postDelayed({
-                                    rootView.removeView(alertaView)
-
-                                }, 2000)
-                            }
-                        }
+                        }, 2000)
                     }
                 )
 
