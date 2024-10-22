@@ -239,7 +239,7 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/btnVolverPerfil"
+            android:id="@+id/btnCambiarContras"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="68dp"
             android:layout_height="wrap_content"

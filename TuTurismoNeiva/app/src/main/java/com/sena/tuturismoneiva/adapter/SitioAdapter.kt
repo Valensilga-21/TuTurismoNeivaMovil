@@ -13,13 +13,12 @@ import com.sena.tuturismoneiva.R
 import com.sena.tuturismoneiva.models.SitioMonumento
 
 class SitioAdapter(
-    private val contexto: Context,
     private val espacioList: MutableList<SitioMonumento>,
     private val onItemClick: (SitioMonumento) -> Unit
 ) : RecyclerView.Adapter<SitioAdapter.SitioViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SitioViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_sitios, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_sitio, parent, false)
         return SitioViewHolder(view)
     }
 

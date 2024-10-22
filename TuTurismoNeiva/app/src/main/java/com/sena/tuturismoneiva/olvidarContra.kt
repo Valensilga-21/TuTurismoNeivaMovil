@@ -17,7 +17,7 @@ class olvidarContra : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var volverInicioSesion: Button =findViewById<Button>(R.id.volverInicioSesion)
+        var volverInicioSesion: Button =findViewById<Button>(R.id.volverConfirmCorreo)
         volverInicioSesion.setOnClickListener{
             finish()
         }

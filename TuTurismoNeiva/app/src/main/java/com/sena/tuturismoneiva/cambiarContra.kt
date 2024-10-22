@@ -55,6 +55,11 @@ class cambiarContra : Fragment() {
             cambiarContraseña()
         }
 
+        val btnBack = view.findViewById<Button>(R.id.btnCambiarContras)
+        btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         return view
     }
 

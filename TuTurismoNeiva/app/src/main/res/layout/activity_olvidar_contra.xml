@@ -165,7 +165,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/volverInicioSesion"
+        android:id="@+id/volverConfirmCorreo"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="59dp"
         android:layout_height="51dp"

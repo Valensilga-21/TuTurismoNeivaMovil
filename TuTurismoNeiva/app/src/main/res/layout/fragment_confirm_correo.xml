@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,9 +9,7 @@
     tools:context=".confirmCorreo">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -107,9 +106,9 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="219dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/confirmCorreoElectronico"
                 android:textAlignment="center"
@@ -120,10 +119,10 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="258dp"
+                android:layout_width="275dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="130dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="122dp"
                 android:text="@string/textoCambioCorreoElectronico"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -159,9 +158,9 @@
             <Button
                 android:id="@+id/btnConfirm"
                 style="@style/Widget.Material3.Button"
-                android:layout_width="239dp"
+                android:layout_width="245dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="47dp"
                 android:layout_marginTop="275dp"
                 android:backgroundTint="@color/naranja"
                 android:text="@string/confirm"
@@ -174,7 +173,7 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/volverInicioSesion"
+            android:id="@+id/volverConfirmCorreo"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="59dp"
             android:layout_height="51dp"
@@ -189,6 +188,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.117" />
+
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_height="159dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="15dp"></LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

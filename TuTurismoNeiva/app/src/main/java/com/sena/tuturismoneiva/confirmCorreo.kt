@@ -30,6 +30,11 @@ class confirmCorreo : Fragment() {
         val etConfirmEmail = view.findViewById<EditText>(R.id.editTextTextEmailAddress)
         val btnConfirmEmail = view.findViewById<Button>(R.id.btnConfirm)
 
+        val btnBack = view.findViewById<Button>(R.id.volverConfirmCorreo)
+        btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         // Al hacer clic en el botón de confirmar
         btnConfirmEmail.setOnClickListener {
             val emailIngresado = etConfirmEmail.text.toString().trim()

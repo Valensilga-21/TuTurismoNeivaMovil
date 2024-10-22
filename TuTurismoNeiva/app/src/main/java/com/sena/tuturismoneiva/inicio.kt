@@ -8,11 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
-import com.android.volley.RequestQueue
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.sena.tuturismoneiva.adapter.SitioAdapter
@@ -30,31 +27,38 @@ class inicio : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_inicio, container, false)
+        return inflater.inflate(R.layout.fragment_inicio, container, false)
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inicializar RecyclerView y Adapter aquí
         recyclerView = view.findViewById(R.id.recyclerViewMonuments)
 
-        sitioAdapter = SitioAdapter(requireContext(), sitioList) { sitio ->
-            val intent = Intent(requireContext(), inicio::class.java).apply {
-                putExtra("nombreSitioMonumento", sitio.nombreSitioMonumento)
-                putExtra("direccionSitioMonumento", sitio.direccionSitioMonumento)
+        // Asegurarse de que el contexto esté disponible
+        if (isAdded) {
+            sitioAdapter = SitioAdapter(requireContext(), sitioList) { sitio ->
+                val intent = Intent(requireContext(), inicio::class.java).apply {
+                    putExtra("nombreSitioMonumento", sitio.nombreSitioMonumento)
+                    putExtra("direccionSitioMonumento", sitio.direccionSitioMonumento)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
+
+            recyclerView.adapter = sitioAdapter
+
+            // Configurar el GridLayoutManager
+            recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+
+            // Llamar a la API
+            consultarAPI()
         }
-
-        recyclerView.adapter = sitioAdapter
-
-        // Cambia LinearLayoutManager a GridLayoutManager
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2) // 2 columnas
-
-        consultarAPI()
-
-        return view
     }
 
     private fun consultarAPI() {
         val url = config.urlSitios
-        val queue = Volley.newRequestQueue(requireContext())
+        val queue = Volley.newRequestQueue(requireContext()) // Solo se llama a requireContext() después de verificar
 
         val jsonArrayRequest = JsonArrayRequest(
             Request.Method.GET, url, null,
@@ -64,15 +68,12 @@ class inicio : Fragment() {
                     for (i in 0 until response.length()) {
                         val espacioJson = response.getJSONObject(i)
 
-                        // Manejo de excepciones para cada campo
                         val nombreSitio = espacioJson.optString("nombreSitioMonumento", "Nombre no disponible")
                         val direccionSitio = espacioJson.optString("direccionSitioMonumento", "Dirección no disponible")
-                        //val imagen_base = espacioJson.optString("imagen_base", "Imagen no disponible")
 
                         val espacio = SitioMonumento(
                             nombreSitioMonumento = nombreSitio,
-                            direccionSitioMonumento = direccionSitio,
-                            //imagen_base= imagen_base
+                            direccionSitioMonumento = direccionSitio
                         )
                         sitioList.add(espacio)
                     }
