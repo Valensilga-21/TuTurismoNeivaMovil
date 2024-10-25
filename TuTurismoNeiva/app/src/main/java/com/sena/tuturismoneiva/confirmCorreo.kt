@@ -7,7 +7,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import cambiarContra
 import com.sena.tuturismoneiva.R
 
 class confirmCorreo : Fragment() {
@@ -27,8 +26,8 @@ class confirmCorreo : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_confirm_correo, container, false)
 
-        val etConfirmEmail = view.findViewById<EditText>(R.id.editTextTextEmailAddress)
-        val btnConfirmEmail = view.findViewById<Button>(R.id.btnConfirm)
+        val etConfirmEmail = view.findViewById<EditText>(R.id.txtEmail)
+        val btnConfirmEmail = view.findViewById<Button>(R.id.btnPassword)
 
         // Al hacer clic en el botón de confirmar
         btnConfirmEmail.setOnClickListener {

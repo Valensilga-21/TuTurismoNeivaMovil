@@ -55,6 +55,9 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
     implementation("androidx.cardview:cardview:1.0.0")
 
+    //olvidar contra
+    implementation ("com.google.firebase:firebase-bom:33.4.0")
+    implementation ("com.google.firebase:firebase-auth")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
